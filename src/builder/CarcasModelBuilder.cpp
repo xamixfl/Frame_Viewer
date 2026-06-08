@@ -1,6 +1,6 @@
 #include "builder/CarcasModelBuilder.h"
 #include "bridge/BaseModelImpl.h"
-#include "bridge/CarcasModel.h"
+#include "bridge/AssimpModelImpl.h"
 #include "data/Point.h"
 #include "data/Edge.h"
 #include "data/Face.h"
@@ -30,7 +30,7 @@ void CarcasModelBuilder::_checkReader() const {
 }
 
 void CarcasModelBuilder::_initModel() noexcept {
-    _model = std::make_unique<CarcasModel>();
+    _model = std::make_unique<AssimpModelImpl>();
 }
 
 void CarcasModelBuilder::_readPoints() const {

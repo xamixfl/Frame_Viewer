@@ -109,3 +109,19 @@ void SceneManager::clear(HistoryManager& historyMgr) {
     clear();
     historyMgr.clear();
 }
+
+void SceneManager::addLight(const std::shared_ptr<Light>& light) {
+    if (!light) throw NullObjectError(__FILE__, "SceneManager", __FUNCTION__);
+    _lights.push_back(light);
+}
+
+std::vector<std::shared_ptr<BaseLightImpl>> SceneManager::getLights() const {
+    std::vector<std::shared_ptr<BaseLightImpl>> list;
+    for (const auto& l : _lights) {
+        if (BaseLightImpl* impl = l->getImpl()) {
+            std::shared_ptr<BaseLightImpl> baseLight(impl, [](BaseLightImpl*){});
+            list.push_back(baseLight);
+        }
+    }
+    return list;
+}

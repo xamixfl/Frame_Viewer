@@ -3,6 +3,7 @@
 
 class BaseModelImpl;
 class BaseCameraImpl;
+class BaseLightImpl;
 
 class BaseVisitor {
 public:
@@ -10,6 +11,7 @@ public:
 
     virtual void visit(BaseModelImpl& impl) noexcept = 0;
     virtual void visit(BaseCameraImpl& impl) noexcept = 0;
+    virtual void visit(BaseLightImpl& impl) noexcept = 0; 
 };
 
 #endif // BASEVISITOR_H

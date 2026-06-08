@@ -22,10 +22,11 @@
 #include "director/CarcasModelDirector.h"
 #include "director/CarcasCameraDirector.h"
 #include "director/SceneDirector.h"
+#include "director/AssimpDirector.h"
 #include "builder/CarcasModelBuilder.h"
-#include "builder/AdjMatrixModelBuilder.h"
 #include "builder/CarcasCameraBuilder.h"
 #include "builder/SceneBuilder.h"
+#include "builder/AssimpModelBuilder.h"
 
 #include <QGraphicsScene>
 #include <QGraphicsView>
@@ -49,12 +50,12 @@ std::unique_ptr<Solution> buildLoadSolution() {
     return std::make_unique<Solution>(std::initializer_list<std::pair<std::size_t, Solution::CreatorFactory>>{
         { static_cast<std::size_t>(LoadId::Model),
           &CreatorMaker::make<CarcasModelBuilder, CarcasModelDirector> },
-        { static_cast<std::size_t>(LoadId::ModelMatrix),
-          &CreatorMaker::make<AdjMatrixModelBuilder, CarcasModelDirector> },
         { static_cast<std::size_t>(LoadId::Camera),
           &CreatorMaker::make<CarcasCameraBuilder, CarcasCameraDirector> },
         { static_cast<std::size_t>(LoadId::Scene),
-          &CreatorMaker::make<SceneBuilder, SceneDirector> }
+          &CreatorMaker::make<SceneBuilder, SceneDirector> },
+        { static_cast<std::size_t>(LoadId::AssimpModel), 
+        []() { return CreatorMaker::make<AssimpModelBuilder, AssimpDirector>(); } }
     });
 }
 
@@ -277,11 +278,15 @@ void MainWindow::_safeExecute(std::unique_ptr<BaseCommand> cmd, const QString& e
 }
 
 void MainWindow::onLoadModel() {
-    const QString fname = QFileDialog::getOpenFileName(this, "Загрузить модель", QString(), "*.txt *.bin");
+    const QString fname = QFileDialog::getOpenFileName(this, "Загрузить модель", QString(), "*.obj *.txt *.bin");
     if (fname.isEmpty()) {
         return;
     }
-    const auto loadId = static_cast<LoadId>(_reprCombo->currentData().toULongLong());
+
+    const auto loadId = fname.endsWith(".obj", Qt::CaseInsensitive) 
+                      ? LoadId::AssimpModel 
+                      : static_cast<LoadId>(_reprCombo->currentData().toULongLong());
+
     _safeExecute(std::make_unique<LoadModelCommand>(
         _facade->getLoadManager(), _facade->getSceneManager(),
         fname.toStdString(), loadId), "Ошибка загрузки модели");

@@ -20,6 +20,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+find_package(assimp CONFIG REQUIRED)
 
 include_directories(
 	"src"
@@ -29,8 +30,6 @@ set(DOMAIN_SOURCES
     src/data/Point.cpp
 
     src/bridge/VectorCompositeImpl.cpp
-    src/bridge/CarcasModel.cpp
-    src/bridge/AdjMatrixModel.cpp
     src/bridge/CarcasCamera.cpp
 
     src/memento/Memento.cpp
@@ -52,7 +51,6 @@ set(DOMAIN_SOURCES
 
     src/builder/BaseBuilder.cpp
     src/builder/CarcasModelBuilder.cpp
-    src/builder/AdjMatrixModelBuilder.cpp
     src/builder/CarcasCameraBuilder.cpp
     src/builder/SceneBuilder.cpp
 
@@ -78,6 +76,15 @@ set(DOMAIN_SOURCES
 
     src/factory/QtDrawer.cpp
     src/factory/QtDrawerFactory.cpp
+
+    src/bridge/AssimpModelImpl.cpp
+    src/builder/AssimpModelBuilder.cpp
+    src/director/AssimpDirector.cpp
+    src/bridge/AssimpModelImpl.cpp
+    src/director/AssimpDirector.cpp  
+    src/reader/AssimpReader.cpp
+    src/builder/AssimpModelBuilder.cpp
+    src/director/AssimpDirector.cpp
 )
 
 set(UI_SOURCES
@@ -94,4 +101,5 @@ target_link_libraries(OOP_Lab3_FrameViewer PRIVATE
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets
+    assimp::assimp
 )

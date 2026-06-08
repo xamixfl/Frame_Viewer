@@ -8,6 +8,8 @@
 #include "composite/BaseObject.h"
 #include "composite/Scene.h"
 #include "manager/BaseManager.h"
+#include "composite/Light.h"
+#include "bridge/BaseLightImpl.h"
 
 class Camera;
 class CompositeObject;
@@ -38,6 +40,9 @@ public:
 
     void addDefaultCamera();
 
+    void addLight(const std::shared_ptr<Light>& light);
+    std::vector<std::shared_ptr<BaseLightImpl>> getLights() const;
+    
     [[nodiscard]] std::shared_ptr<CompositeObject> buildVisibleComposite() const;
     [[nodiscard]] std::shared_ptr<CompositeObject> buildInvisibleComposite() const;
 
@@ -47,6 +52,7 @@ public:
 private:
     Scene _scene;
     std::weak_ptr<Camera> _activeCamera;
+    std::vector<std::shared_ptr<Light>> _lights;
 };
 
 #endif // SCENEMANAGER_H

@@ -12,6 +12,12 @@ void DrawManager::draw(BaseObject& obj, std::shared_ptr<Camera> camera) {
 }
 
 void DrawManager::drawScene(SceneManager& sceneMgr) {
+    auto visitor = std::make_shared<DrawVisitor>(_factory, sceneMgr.getActiveCamera());
+
+    for (auto& obj : sceneMgr.getScene()) {
+        obj->accept(visitor);
+    }
+
     auto visible = sceneMgr.buildVisibleComposite();
     draw(*visible, sceneMgr.getActiveCamera());
 }

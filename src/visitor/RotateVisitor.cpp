@@ -33,3 +33,8 @@ void RotateVisitor::visit(BaseCameraImpl& impl) noexcept {
     up.rotate(_transform.getX(), _transform.getY(), _transform.getZ());
     impl.setUp(up);
 }
+
+void RotateVisitor::visit(BaseLightImpl& /*impl*/) noexcept {
+    // Здесь пусто. 
+    // Мы оставляем комментарий, чтобы показать, что это сделано намеренно.
+}

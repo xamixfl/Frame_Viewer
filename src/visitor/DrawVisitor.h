@@ -3,6 +3,10 @@
 
 #include <memory>
 #include "visitor/BaseVisitor.h"
+#include "../data/Point.h" 
+#include "../data/Face.h"  
+#include "../data/Edge.h"
+#include "../data/Material.h"
 
 class AbstractDrawerFactory;
 class Camera;
@@ -14,8 +18,16 @@ public:
 
     void visit(BaseModelImpl& impl) noexcept override;
     void visit(BaseCameraImpl& impl) noexcept override;
+    void visit(BaseLightImpl& impl) noexcept override;
 
 private:
+    // Математические помощники теперь внутри Визитора
+    bool isFaceVisible(const std::vector<Point>& points, const Face& face, const Point& cameraPos) const;
+    bool isEdgeVisible(const Edge& edge, const std::vector<Face>& faces, const std::vector<Point>& points, const Point& cameraPos) const;
+    bool edgeInFace(const Edge& edge, const Face& face) const;
+
+    std::vector<std::shared_ptr<BaseLightImpl>> _lights;
+
     AbstractDrawerFactory& _factory;
     std::shared_ptr<Camera> _camera;
 };

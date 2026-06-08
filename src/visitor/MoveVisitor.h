@@ -10,6 +10,7 @@ public:
 
     void visit(BaseModelImpl& impl) noexcept override;
     void visit(BaseCameraImpl& impl) noexcept override;
+    void visit(BaseLightImpl& impl) noexcept override;
 };
 
 #endif // MOVEVISITOR_H

@@ -5,11 +5,13 @@
 #include <vector>
 
 #include "data/Point.h"
+#include "bridge/BaseModelImpl.h"
 
 class CarcasModel;
 class AdjMatrixModel;
 class CarcasCamera;
 class CompositeObject;
+class AssimpModelImpl;
 
 class Memento {
 public:
@@ -20,16 +22,12 @@ protected:
 };
 
 class ModelMemento final : public Memento {
-public:
-    ~ModelMemento() override = default;
-
+    friend class AssimpModelImpl;
 private:
-    friend class CarcasModel;
-    friend class AdjMatrixModel;
+    explicit ModelMemento(std::vector<Point> pts, Material mat) noexcept;
 
-    explicit ModelMemento(std::vector<Point> pts) noexcept;
-
-    std::vector<Point> points;
+    std::vector<Point> _points;
+    Material _material;
 };
 
 class CameraMemento final : public Memento {

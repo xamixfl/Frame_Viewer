@@ -25,3 +25,8 @@ void ScaleVisitor::visit(BaseModelImpl& impl) noexcept {
 }
 
 void ScaleVisitor::visit(BaseCameraImpl& /*impl*/) noexcept {}
+
+void ScaleVisitor::visit(BaseLightImpl& /*impl*/) noexcept {
+    // Здесь пусто. 
+    // Мы оставляем комментарий, чтобы показать, что это сделано намеренно.
+}

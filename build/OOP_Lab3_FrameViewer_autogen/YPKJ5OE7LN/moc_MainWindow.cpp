@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'MainWindow.h'
 **
-** Created by: The Qt Meta Object Compiler version 69 (Qt 6.10.1)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.8.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -17,8 +17,8 @@
 #include <QtCore/qxptype_traits.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'MainWindow.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 69
-#error "This file was generated using the moc from 6.10.1. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.8.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -34,63 +34,101 @@ namespace {
 struct qt_meta_tag_ZN10MainWindowE_t {};
 } // unnamed namespace
 
-template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_tag_ZN10MainWindowE_t>()
-{
-    namespace QMC = QtMocConstants;
-    QtMocHelpers::StringRefStorage qt_stringData {
-        "MainWindow",
-        "onLoadModel",
-        "",
-        "onLoadCamera",
-        "onAddDefaultCamera",
-        "onRemoveSelected",
-        "onSwitchCamera",
-        "onClearScene",
-        "onMove",
-        "onRotate",
-        "onScale",
-        "onUndo",
-        "onRedo"
-    };
 
-    QtMocHelpers::UintData qt_methods {
-        // Slot 'onLoadModel'
-        QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onLoadCamera'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onAddDefaultCamera'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onRemoveSelected'
-        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onSwitchCamera'
-        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onClearScene'
-        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onMove'
-        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onRotate'
-        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onScale'
-        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onUndo'
-        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onRedo'
-        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
-    };
-    QtMocHelpers::UintData qt_properties {
-    };
-    QtMocHelpers::UintData qt_enums {
-    };
-    return QtMocHelpers::metaObjectData<MainWindow, qt_meta_tag_ZN10MainWindowE_t>(QMC::MetaObjectFlag{}, qt_stringData,
-            qt_methods, qt_properties, qt_enums);
-}
+#ifdef QT_MOC_HAS_STRINGDATA
+static constexpr auto qt_meta_stringdata_ZN10MainWindowE = QtMocHelpers::stringData(
+    "MainWindow",
+    "onLoadModel",
+    "",
+    "onLoadCamera",
+    "onAddDefaultCamera",
+    "onRemoveSelected",
+    "onSwitchCamera",
+    "onClearScene",
+    "onMove",
+    "onRotate",
+    "onScale",
+    "onUndo",
+    "onRedo"
+);
+#else  // !QT_MOC_HAS_STRINGDATA
+#error "qtmochelpers.h not found or too old."
+#endif // !QT_MOC_HAS_STRINGDATA
+
+Q_CONSTINIT static const uint qt_meta_data_ZN10MainWindowE[] = {
+
+ // content:
+      12,       // revision
+       0,       // classname
+       0,    0, // classinfo
+      11,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   80,    2, 0x08,    1 /* Private */,
+       3,    0,   81,    2, 0x08,    2 /* Private */,
+       4,    0,   82,    2, 0x08,    3 /* Private */,
+       5,    0,   83,    2, 0x08,    4 /* Private */,
+       6,    0,   84,    2, 0x08,    5 /* Private */,
+       7,    0,   85,    2, 0x08,    6 /* Private */,
+       8,    0,   86,    2, 0x08,    7 /* Private */,
+       9,    0,   87,    2, 0x08,    8 /* Private */,
+      10,    0,   88,    2, 0x08,    9 /* Private */,
+      11,    0,   89,    2, 0x08,   10 /* Private */,
+      12,    0,   90,    2, 0x08,   11 /* Private */,
+
+ // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+
+       0        // eod
+};
+
 Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
     QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10MainWindowE_t>.stringdata,
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10MainWindowE_t>.data,
+    qt_meta_stringdata_ZN10MainWindowE.offsetsAndSizes,
+    qt_meta_data_ZN10MainWindowE,
     qt_static_metacall,
     nullptr,
-    qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN10MainWindowE_t>.metaTypes,
+    qt_incomplete_metaTypeArray<qt_meta_tag_ZN10MainWindowE_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
+        // method 'onLoadModel'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onLoadCamera'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onAddDefaultCamera'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onRemoveSelected'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onSwitchCamera'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onClearScene'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onMove'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onRotate'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onScale'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onUndo'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onRedo'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
+    >,
     nullptr
 } };
 
@@ -124,7 +162,7 @@ const QMetaObject *MainWindow::metaObject() const
 void *MainWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10MainWindowE_t>.strings))
+    if (!strcmp(_clname, qt_meta_stringdata_ZN10MainWindowE.stringdata0))
         return static_cast<void*>(this);
     return QMainWindow::qt_metacast(_clname);
 }

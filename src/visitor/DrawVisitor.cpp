@@ -2,6 +2,7 @@
 #include "composite/Camera.h"
 #include "bridge/BaseModelImpl.h"
 #include "bridge/BaseCameraImpl.h"
+#include "bridge/BaseLightImpl.h"
 #include "factory/AbstractDrawerFactory.h"
 #include "factory/BaseDrawer.h"
 #include "data/Point.h"
@@ -106,6 +107,7 @@ DrawVisitor::DrawVisitor(AbstractDrawerFactory& factory, std::shared_ptr<Camera>
 
 void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
     auto drawer = _factory.createDrawer();
+    const std::vector<Face>& faces = impl.getFaces();
     const std::vector<Point>& points = impl.getPoints();
 
     if (!_camera) {
@@ -113,9 +115,7 @@ void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
         for (const Edge& e : edges) {
             const int a = e.first();
             const int b = e.second();
-            if (a < 0 || b < 0
-                || static_cast<size_t>(a) >= points.size()
-                || static_cast<size_t>(b) >= points.size()) {
+            if (a < 0 || b < 0 || static_cast<size_t>(a) >= points.size() || static_cast<size_t>(b) >= points.size()) {
                 continue;
             }
             drawer->drawLine(points[a], points[b]);
@@ -128,23 +128,50 @@ void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
         return;
     }
 
-    const std::vector<Edge> edges = impl.getVisibleEdges(_camera->_impl->getPosition());
+    for (size_t i = 0; i < faces.size(); ++i) {
+        const auto& face = faces[i];
 
-    for (const Edge& e : edges) {
-        const int a = e.first();
-        const int b = e.second();
-        if (a < 0 || b < 0
-            || static_cast<size_t>(a) >= points.size()
-            || static_cast<size_t>(b) >= points.size()) {
+        if (!impl.isFaceVisible(i, _camera->_impl->getPosition())) {
             continue;
         }
-        ViewPoint va = toView(points[a], vb);
-        ViewPoint vb_ = toView(points[b], vb);
-        if (!clipNear(va, vb_)) {
-            continue;
+
+        const Point& p1 = points[face[0]];
+        const Point& p2 = points[face[1]];
+        const Point& p3 = points[face[2]];
+        Point normal = normalize(cross(sub(p2, p1), sub(p3, p1)));
+
+        float r = 0.0f, g = 0.0f, b = 0.0f;
+        for (const auto& light : _lights) {
+            float lr, lg, lb;
+            light->getIntensityAt(p1, normal, lr, lg, lb);
+            r += lr; g += lg; b += lb;
         }
-        drawer->drawLine(project(va), project(vb_));
+
+        Material lightedMat = impl.getMaterial();
+        for (int j = 0; j < 3; ++j) {
+            lightedMat.diffuse[j] *= r; 
+        }
+
+        std::vector<Point> projectedPoints;
+        bool visible = true;
+        for (int index : face) {
+            ViewPoint vp = toView(points[index], vb);
+            if (vp.z <= 0) { 
+                visible = false; 
+                break; 
+            }
+            projectedPoints.push_back(project(vp));
+        }
+
+        if (visible && projectedPoints.size() >= 3) {
+            drawer->drawPolygon(projectedPoints, lightedMat);
+        }
     }
 }
 
 void DrawVisitor::visit(BaseCameraImpl& /*impl*/) noexcept {}
+
+void DrawVisitor::visit(BaseLightImpl& impl) noexcept {
+    _lights.push_back(std::shared_ptr<BaseLightImpl>(&impl, [](BaseLightImpl*){}));
+}
+

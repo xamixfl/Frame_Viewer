@@ -14,14 +14,19 @@ public:
     void setY(double v) noexcept { _y = v; }
     void setZ(double v) noexcept { _z = v; }
 
+    void setNormal(double nx, double ny, double nz) { _nx = nx; _ny = ny; _nz = nz; }
+    void normalizeNormal() noexcept;
+    double setNx() const { return _nx; }
+    double setNy() const { return _ny; }
+    double setNz() const { return _nz; }
+
     void move(double dx, double dy, double dz) noexcept;
     void rotate(double ax, double ay, double az) noexcept;
     void scale(double sx, double sy, double sz) noexcept;
 
 private:
-    double _x;
-    double _y;
-    double _z;
+    double _x, _y, _z;
+    double _nx, _ny, _nz;
 };
 
 #endif // POINT_H

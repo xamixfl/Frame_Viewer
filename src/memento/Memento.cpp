@@ -4,8 +4,10 @@
 
 Memento::~Memento() = default;
 
-ModelMemento::ModelMemento(std::vector<Point> pts) noexcept
-    : points(std::move(pts)) {}
+#include "memento/Memento.h"
+
+ModelMemento::ModelMemento(std::vector<Point> pts, Material mat) noexcept
+    : _points(std::move(pts)), _material(std::move(mat)) {}
 
 CameraMemento::CameraMemento(Point pos, Point dir, Point u) noexcept
     : position(pos), direction(dir), up(u) {}

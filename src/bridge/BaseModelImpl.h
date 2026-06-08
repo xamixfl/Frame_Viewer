@@ -7,6 +7,7 @@
 #include "data/Point.h"
 #include "data/Edge.h"
 #include "data/Face.h"
+#include "data/Material.h"
 
 class Memento;
 
@@ -23,10 +24,15 @@ public:
     virtual void addEdge(const Edge& e) = 0;
     virtual void addFace(const Face& f) = 0;
 
+    virtual bool isFaceVisible(size_t faceIndex, const Point& cameraPos) const = 0;
+
     [[nodiscard]] virtual std::vector<Edge> getVisibleEdges(const Point& cameraPos) const = 0;
 
     [[nodiscard]] virtual std::shared_ptr<Memento> createSnapshot() = 0;
     virtual void restoreSnapshot(const std::shared_ptr<Memento>& snapshot) = 0;
+
+    virtual void setMaterial(const Material& mat) noexcept = 0;                // методы управления материалом
+    virtual Material getMaterial() const noexcept = 0;
 };
 
 #endif // BASEMODELIMPL_H
