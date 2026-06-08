@@ -1,0 +1,17 @@
+#ifndef ABSTRACTREADER_H
+#define ABSTRACTREADER_H
+
+class AbstractReader
+{
+public:
+    AbstractReader();
+    virtual ~AbstractReader() = default;
+
+    virtual void open() = 0;
+    virtual void close() = 0;
+    virtual double read() = 0;
+
+    virtual bool is_open() = 0;
+};
+
+#endif // ABSTRACTREADER_H

@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_OOP_Lab3_FrameViewer_FILE /Users/cilimm/Github/OOP_Lab3_FrameViewer/build/OOP_Lab3_FrameViewer)
+set(__QT_DEPLOY_TARGET_OOP_Lab3_FrameViewer_TYPE EXECUTABLE)

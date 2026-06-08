@@ -1,0 +1,5 @@
+/Users/cilimm/Github/OOP_Lab3_FrameViewer/build/CMakeFiles/OOP_Lab3_FrameViewer.dir
+/Users/cilimm/Github/OOP_Lab3_FrameViewer/build/CMakeFiles/edit_cache.dir
+/Users/cilimm/Github/OOP_Lab3_FrameViewer/build/CMakeFiles/rebuild_cache.dir
+/Users/cilimm/Github/OOP_Lab3_FrameViewer/build/CMakeFiles/OOP_Lab3_FrameViewer_autogen_timestamp_deps.dir
+/Users/cilimm/Github/OOP_Lab3_FrameViewer/build/CMakeFiles/OOP_Lab3_FrameViewer_autogen.dir
