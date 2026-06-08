@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+6efc291ec68cb7a15c8cbb068e4ebe62 CMakeFiles/OOP_Lab3_FrameViewer_autogen
+a249bf7709e0b78ce459e12234b8d525 OOP_Lab3_FrameViewer_autogen/timestamp

@@ -1,10 +1,7 @@
 #include "LightImpl.h"
+#include "data/Point.h"
 #include <algorithm>
 #include <cmath>
-
-extern double dot(const Point& a, const Point& b);
-extern Point sub(const Point& a, const Point& b);
-extern Point normalize(const Point& a);
 
 void LightImpl::getIntensityAt(const Point& point, const Point& normal, 
                                float& r, float& g, float& b) const noexcept {
@@ -19,4 +16,8 @@ void LightImpl::getIntensityAt(const Point& point, const Point& normal,
     r = lr * dotNL * i;
     g = lg * dotNL * i;
     b = lb * dotNL * i;
+}
+
+float LightImpl::getIntensity() const noexcept {
+    return _intensity;
 }

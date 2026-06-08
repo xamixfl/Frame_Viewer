@@ -13,30 +13,6 @@
 
 namespace {
 
-double dot(const Point& a, const Point& b) noexcept {
-    return a.getX() * b.getX() + a.getY() * b.getY() + a.getZ() * b.getZ();
-}
-
-Point cross(const Point& a, const Point& b) noexcept {
-    return {
-        a.getY() * b.getZ() - a.getZ() * b.getY(),
-        a.getZ() * b.getX() - a.getX() * b.getZ(),
-        a.getX() * b.getY() - a.getY() * b.getX()
-    };
-}
-
-Point sub(const Point& a, const Point& b) noexcept {
-    return { a.getX() - b.getX(), a.getY() - b.getY(), a.getZ() - b.getZ() };
-}
-
-Point normalize(const Point& a) noexcept {
-    const double l = std::sqrt(dot(a, a));
-    if (l < 1e-9) {
-        return { 0.0, 0.0, 1.0 };
-    }
-    return { a.getX() / l, a.getY() / l, a.getZ() / l };
-}
-
 constexpr double FOCAL = 8.0;
 constexpr double NEAR_Z = 0.05;
 
@@ -172,6 +148,5 @@ void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
 void DrawVisitor::visit(BaseCameraImpl& /*impl*/) noexcept {}
 
 void DrawVisitor::visit(BaseLightImpl& impl) noexcept {
-    _lights.push_back(std::shared_ptr<BaseLightImpl>(&impl, [](BaseLightImpl*){}));
+    _lights.push_back(&impl);
 }
-

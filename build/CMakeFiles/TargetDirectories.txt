@@ -1,5 +1,0 @@
-/home/aleksey/MSTU/OOP/lab3/FrameViewer/build/CMakeFiles/OOP_Lab3_FrameViewer.dir
-/home/aleksey/MSTU/OOP/lab3/FrameViewer/build/CMakeFiles/edit_cache.dir
-/home/aleksey/MSTU/OOP/lab3/FrameViewer/build/CMakeFiles/rebuild_cache.dir
-/home/aleksey/MSTU/OOP/lab3/FrameViewer/build/CMakeFiles/OOP_Lab3_FrameViewer_autogen_timestamp_deps.dir
-/home/aleksey/MSTU/OOP/lab3/FrameViewer/build/CMakeFiles/OOP_Lab3_FrameViewer_autogen.dir

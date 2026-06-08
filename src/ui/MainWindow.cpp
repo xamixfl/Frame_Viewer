@@ -27,6 +27,8 @@
 #include "builder/CarcasCameraBuilder.h"
 #include "builder/SceneBuilder.h"
 #include "builder/AssimpModelBuilder.h"
+#include "composite/Light.h"
+#include "bridge/LightImpl.h"
 
 #include <QGraphicsScene>
 #include <QGraphicsView>
@@ -84,6 +86,14 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
         std::move(historyMgr)
     );
 
+    auto impl = std::make_unique<LightImpl>();
+    impl->setPosition({100, 100, 100});
+    impl->setIntensity(1.0f);
+
+    auto light = std::make_shared<Light>(std::move(impl));
+
+    _facade->getSceneManager().addObject(light);
+
     _ensureCamera();
     _refreshObjectList();
     _refreshHistory();
@@ -119,10 +129,12 @@ void MainWindow::_setupUi() {
     auto* loadModelBtn  = new QPushButton("Загрузить модель…");
     auto* loadCameraBtn = new QPushButton("Загрузить камеру…");
     auto* addCameraBtn  = new QPushButton("Добавить камеру по умолчанию");
+    auto* addLightBtn   = new QPushButton("Добавить свет");
     auto* clearBtn      = new QPushButton("Очистить сцену");
     loadLayout->addWidget(loadModelBtn);
     loadLayout->addWidget(loadCameraBtn);
     loadLayout->addWidget(addCameraBtn);
+    loadLayout->addWidget(addLightBtn);
     loadLayout->addWidget(clearBtn);
     sidebar->addWidget(loadBox);
 
@@ -185,6 +197,7 @@ void MainWindow::_setupUi() {
     connect(loadModelBtn,  &QPushButton::clicked, this, &MainWindow::onLoadModel);
     connect(loadCameraBtn, &QPushButton::clicked, this, &MainWindow::onLoadCamera);
     connect(addCameraBtn,  &QPushButton::clicked, this, &MainWindow::onAddDefaultCamera);
+    connect(addLightBtn, &QPushButton::clicked, this, &MainWindow::onAddDefaultLight);
     connect(clearBtn,      &QPushButton::clicked, this, &MainWindow::onClearScene);
     connect(removeBtn,     &QPushButton::clicked, this, &MainWindow::onRemoveSelected);
     connect(switchCamBtn,  &QPushButton::clicked, this, &MainWindow::onSwitchCamera);
@@ -317,6 +330,20 @@ void MainWindow::onAddDefaultCamera() {
     _refreshHistory();
     _redraw();
     statusBar()->showMessage("Добавлена камера по умолчанию (активна)");
+}
+
+void MainWindow::onAddDefaultLight() {
+    auto impl = std::make_unique<LightImpl>();
+    impl->setPosition({100, 100, 100});
+    impl->setIntensity(1.0f);
+
+    auto light = std::make_shared<Light>(std::move(impl));
+
+    _facade->getSceneManager().addObject(light);
+
+    _refreshObjectList();
+    _redraw();
+    statusBar()->showMessage("Добавлен свет");
 }
 
 void MainWindow::onRemoveSelected() {

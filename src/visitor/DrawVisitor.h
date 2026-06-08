@@ -26,7 +26,7 @@ private:
     bool isEdgeVisible(const Edge& edge, const std::vector<Face>& faces, const std::vector<Point>& points, const Point& cameraPos) const;
     bool edgeInFace(const Edge& edge, const Face& face) const;
 
-    std::vector<std::shared_ptr<BaseLightImpl>> _lights;
+    std::vector<BaseLightImpl*> _lights;
 
     AbstractDrawerFactory& _factory;
     std::shared_ptr<Camera> _camera;

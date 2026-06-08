@@ -5,17 +5,19 @@
 
 class LightImpl final : public BaseLightImpl {
 public:
+    virtual ~LightImpl() = default;
     LightImpl() noexcept : _r(1.0f), _g(1.0f), _b(1.0f), _intensity(1.0f), _pos(0,0,0) {}
 
     void setColor(float r, float g, float b) noexcept override { _r = r; _g = g; _b = b; }
     void setIntensity(float i) noexcept override { _intensity = i; }
     void getColor(float& r, float& g, float& b) const noexcept override { r = _r; g = _g; b = _b; }
-    virtual void getIntensityAt(const Point& point, const Point& normal, 
-                            float& r, float& g, float& b) const noexcept = 0;
-
+    void getIntensityAt(const Point& point, const Point& normal, 
+                    float& r, float& g, float& b) const noexcept override;
+                    
     // Реализация новых методов
     void setPosition(const Point& pos) noexcept override { _pos = pos; }
     Point getPosition() const noexcept override { return _pos; }
+    float getIntensity() const noexcept override;
 
 private:
     float _r, _g, _b;

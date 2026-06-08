@@ -1,7 +1,8 @@
-#include "composite/Light.h" // Предполагаемый заголовочный файл
+#include "composite/Light.h" 
 #include "bridge/BaseLightImpl.h"
 #include "visitor/BaseVisitor.h"
 #include "exception/Exceptions.h"
+#include "memento/Memento.h"
 
 Light::Light(std::unique_ptr<BaseLightImpl> impl) : _impl(std::move(impl)) {
     if (!_impl) {
@@ -9,16 +10,18 @@ Light::Light(std::unique_ptr<BaseLightImpl> impl) : _impl(std::move(impl)) {
     }
 }
 
-Light::~Light() = default;
-
 void Light::accept(const std::shared_ptr<BaseVisitor>& visitor) {
-    visitor->visit(*_impl);
+    visitor->visit(*_impl); 
 }
 
 std::shared_ptr<Memento> Light::createSnapshot() {
-    return _impl->createSnapshot(); 
+    return std::shared_ptr<Memento>(new LightMemento(_impl->getPosition(), _impl->getIntensity()));
 }
 
 void Light::restoreSnapshot(const std::shared_ptr<Memento>& snapshot) {
-    _impl->restoreSnapshot(snapshot);
+    auto memento = std::dynamic_pointer_cast<LightMemento>(snapshot);
+    if (memento) {
+        _impl->setPosition(memento->position);
+        _impl->setIntensity(memento->intensity);
+    }
 }

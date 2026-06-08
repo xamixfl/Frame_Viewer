@@ -56,4 +56,18 @@ private:
     std::vector<std::shared_ptr<Memento>> states;
 };
 
+// Memento.h
+class LightMemento final : public Memento {
+public:
+    ~LightMemento() override = default;
+private:
+    // Позволяем классу Light обращаться к приватным полям для сохранения/восстановления
+    friend class Light; 
+
+    LightMemento(Point pos, float intensity) noexcept;
+
+    Point position;
+    float intensity;
+};
+
 #endif // MEMENTO_H

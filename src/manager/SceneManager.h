@@ -41,7 +41,6 @@ public:
     void addDefaultCamera();
 
     void addLight(const std::shared_ptr<Light>& light);
-    std::vector<std::shared_ptr<BaseLightImpl>> getLights() const;
     
     [[nodiscard]] std::shared_ptr<CompositeObject> buildVisibleComposite() const;
     [[nodiscard]] std::shared_ptr<CompositeObject> buildInvisibleComposite() const;

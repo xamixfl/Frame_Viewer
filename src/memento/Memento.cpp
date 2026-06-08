@@ -14,3 +14,6 @@ CameraMemento::CameraMemento(Point pos, Point dir, Point u) noexcept
 
 CompositeMemento::CompositeMemento(std::vector<std::shared_ptr<Memento>> _states) noexcept
     : states(std::move(_states)) {}
+
+LightMemento::LightMemento(Point pos, float intensity) noexcept
+    : position(pos), intensity(intensity) {}

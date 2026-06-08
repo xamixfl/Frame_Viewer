@@ -3,20 +3,23 @@
 
 #include <memory>
 #include "composite/InvisibleObject.h"
+#include "bridge/BaseLightImpl.h"
 
-class BaseLightImpl; 
 class BaseVisitor;
+class Memento;
+class Point;
 
 class Light final : public InvisibleObject {
 public:
     explicit Light(std::unique_ptr<BaseLightImpl> impl);
-    ~Light() override;
+    ~Light() override = default;
 
-    BaseLightImpl* getImpl() const noexcept { return _impl.get(); }
+    void setPosition(const Point& pos) noexcept { _impl->setPosition(pos); }
+    Point getPosition() const noexcept { return _impl->getPosition(); }
+    void setIntensity(float i) noexcept { _impl->setIntensity(i); }
 
     void accept(const std::shared_ptr<BaseVisitor>& visitor) override;
 
-    // Snapshot пока опционален, если нужно сохранять состояние света
     std::shared_ptr<Memento> createSnapshot() override;
     void restoreSnapshot(const std::shared_ptr<Memento>& snapshot) override;
 

@@ -1,13 +1,8 @@
 #include "bridge/AssimpModelImpl.h"
+#include "data/Point.h"
 #include "memento/Memento.h"
 
-namespace {
-    Point sub(const Point& a, const Point& b) { return { a.getX() - b.getX(), a.getY() - b.getY(), a.getZ() - b.getZ() }; }
-    Point cross(const Point& a, const Point& b) {
-        return { a.getY()*b.getZ() - a.getZ()*b.getY(), a.getZ()*b.getX() - a.getX()*b.getZ(), a.getX()*b.getY() - a.getY()*b.getX() };
-    }
-    double dot(const Point& a, const Point& b) { return a.getX()*b.getX() + a.getY()*b.getY() + a.getZ()*b.getZ(); }
-}
+namespace {}
 
 AssimpModelImpl::AssimpModelImpl() = default;
 AssimpModelImpl::~AssimpModelImpl() = default;

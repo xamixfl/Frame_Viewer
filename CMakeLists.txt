@@ -85,6 +85,8 @@ set(DOMAIN_SOURCES
     src/reader/AssimpReader.cpp
     src/builder/AssimpModelBuilder.cpp
     src/director/AssimpDirector.cpp
+    src/composite/Light.cpp     
+    src/bridge/LightImpl.cpp
 )
 
 set(UI_SOURCES
