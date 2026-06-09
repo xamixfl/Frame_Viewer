@@ -41,7 +41,7 @@ void QtDrawer::drawPolygon(const std::vector<Point>& vertices, const Material& m
     QColor color = QColor::fromRgbF(mat.diffuse[0], mat.diffuse[1], mat.diffuse[2]);
     QBrush brush(color);
 
-    QPen pen(Qt::black); // Обводка всегда черная для каркаса, или можешь сделать её цветом материала
+    QPen pen(color);
     pen.setWidth(1);
 
     _scene.addPath(path, pen, brush);

@@ -4,6 +4,10 @@
 #include <memory>
 #include "composite/InvisibleObject.h"
 #include "bridge/BaseLightImpl.h"
+#include "visitor/MoveVisitor.h"
+#include "visitor/RotateVisitor.h"
+#include "visitor/ScaleVisitor.h"
+#include "data/Transform.h"
 
 class BaseVisitor;
 class Memento;
@@ -19,6 +23,10 @@ public:
     void setIntensity(float i) noexcept { _impl->setIntensity(i); }
 
     void accept(const std::shared_ptr<BaseVisitor>& visitor) override;
+
+    void accept(const std::shared_ptr<MoveVisitor>& visitor);
+    void accept(const std::shared_ptr<RotateVisitor>& visitor);
+    void accept(const std::shared_ptr<ScaleVisitor>& visitor);
 
     std::shared_ptr<Memento> createSnapshot() override;
     void restoreSnapshot(const std::shared_ptr<Memento>& snapshot) override;

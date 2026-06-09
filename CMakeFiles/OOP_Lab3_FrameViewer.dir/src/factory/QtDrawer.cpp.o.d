@@ -310,6 +310,12 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o: \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/BaseObject.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/BaseLightImpl.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/../data/Point.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/MoveVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/TransformVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/BaseVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Transform.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/RotateVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/ScaleVisitor.h \
  /usr/include/qt6/QtWidgets/QGraphicsScene \
  /usr/include/qt6/QtWidgets/qgraphicsscene.h \
  /usr/include/qt6/QtWidgets/qtwidgetsglobal.h \

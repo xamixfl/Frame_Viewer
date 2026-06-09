@@ -206,6 +206,12 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/manager/LoadManager.cpp.o: \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/InvisibleObject.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/BaseLightImpl.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/../data/Point.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/MoveVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/TransformVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/BaseVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Transform.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/RotateVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/ScaleVisitor.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/manager/HistoryManager.h \
  /usr/include/c++/14/stack /usr/include/c++/14/deque \
  /usr/include/c++/14/bits/stl_deque.h /usr/include/c++/14/bits/deque.tcc \

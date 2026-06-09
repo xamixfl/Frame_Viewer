@@ -198,4 +198,10 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/ModelCommands.cpp.o: \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/Light.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/InvisibleObject.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/BaseLightImpl.h \
- /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/../data/Point.h
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/../data/Point.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/MoveVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/TransformVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/BaseVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Transform.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/RotateVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/ScaleVisitor.h

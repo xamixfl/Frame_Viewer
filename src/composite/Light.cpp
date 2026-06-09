@@ -14,6 +14,24 @@ void Light::accept(const std::shared_ptr<BaseVisitor>& visitor) {
     visitor->visit(*_impl); 
 }
 
+void Light::accept(const std::shared_ptr<MoveVisitor>& visitor) {
+    if (visitor) {
+        visitor->visit(*_impl);
+    }
+}
+
+void Light::accept(const std::shared_ptr<RotateVisitor>& visitor) {
+    if (visitor) {
+        visitor->visit(*_impl);
+    }
+}
+
+void Light::accept(const std::shared_ptr<ScaleVisitor>& visitor) {
+    if (visitor) {
+        visitor->visit(*_impl);
+    }
+}
+
 std::shared_ptr<Memento> Light::createSnapshot() {
     return std::shared_ptr<Memento>(new LightMemento(_impl->getPosition(), _impl->getIntensity()));
 }
