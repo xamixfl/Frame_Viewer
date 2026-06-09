@@ -491,6 +491,30 @@ src/command/SceneCommands.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OOP_Lab3_FrameViewer.dir/build.make CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SceneCommands.cpp.s
 .PHONY : src/command/SceneCommands.cpp.s
 
+src/command/SetMaterialCommand.o: src/command/SetMaterialCommand.cpp.o
+.PHONY : src/command/SetMaterialCommand.o
+
+# target to build an object file
+src/command/SetMaterialCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OOP_Lab3_FrameViewer.dir/build.make CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o
+.PHONY : src/command/SetMaterialCommand.cpp.o
+
+src/command/SetMaterialCommand.i: src/command/SetMaterialCommand.cpp.i
+.PHONY : src/command/SetMaterialCommand.i
+
+# target to preprocess a source file
+src/command/SetMaterialCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OOP_Lab3_FrameViewer.dir/build.make CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.i
+.PHONY : src/command/SetMaterialCommand.cpp.i
+
+src/command/SetMaterialCommand.s: src/command/SetMaterialCommand.cpp.s
+.PHONY : src/command/SetMaterialCommand.s
+
+# target to generate assembly for a file
+src/command/SetMaterialCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OOP_Lab3_FrameViewer.dir/build.make CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.s
+.PHONY : src/command/SetMaterialCommand.cpp.s
+
 src/command/TransformCommands.o: src/command/TransformCommands.cpp.o
 .PHONY : src/command/TransformCommands.o
 
@@ -658,6 +682,30 @@ src/composite/Scene.s: src/composite/Scene.cpp.s
 src/composite/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OOP_Lab3_FrameViewer.dir/build.make CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Scene.cpp.s
 .PHONY : src/composite/Scene.cpp.s
+
+src/data/MaterialPresets.o: src/data/MaterialPresets.cpp.o
+.PHONY : src/data/MaterialPresets.o
+
+# target to build an object file
+src/data/MaterialPresets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OOP_Lab3_FrameViewer.dir/build.make CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o
+.PHONY : src/data/MaterialPresets.cpp.o
+
+src/data/MaterialPresets.i: src/data/MaterialPresets.cpp.i
+.PHONY : src/data/MaterialPresets.i
+
+# target to preprocess a source file
+src/data/MaterialPresets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OOP_Lab3_FrameViewer.dir/build.make CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.i
+.PHONY : src/data/MaterialPresets.cpp.i
+
+src/data/MaterialPresets.s: src/data/MaterialPresets.cpp.s
+.PHONY : src/data/MaterialPresets.s
+
+# target to generate assembly for a file
+src/data/MaterialPresets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OOP_Lab3_FrameViewer.dir/build.make CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.s
+.PHONY : src/data/MaterialPresets.cpp.s
 
 src/data/Point.o: src/data/Point.cpp.o
 .PHONY : src/data/Point.o
@@ -1312,6 +1360,9 @@ help:
 	@echo "... src/command/SceneCommands.o"
 	@echo "... src/command/SceneCommands.i"
 	@echo "... src/command/SceneCommands.s"
+	@echo "... src/command/SetMaterialCommand.o"
+	@echo "... src/command/SetMaterialCommand.i"
+	@echo "... src/command/SetMaterialCommand.s"
 	@echo "... src/command/TransformCommands.o"
 	@echo "... src/command/TransformCommands.i"
 	@echo "... src/command/TransformCommands.s"
@@ -1333,6 +1384,9 @@ help:
 	@echo "... src/composite/Scene.o"
 	@echo "... src/composite/Scene.i"
 	@echo "... src/composite/Scene.s"
+	@echo "... src/data/MaterialPresets.o"
+	@echo "... src/data/MaterialPresets.i"
+	@echo "... src/data/MaterialPresets.s"
 	@echo "... src/data/Point.o"
 	@echo "... src/data/Point.i"
 	@echo "... src/data/Point.s"

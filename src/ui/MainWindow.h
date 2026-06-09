@@ -31,6 +31,7 @@ private slots:
     void onAddDefaultLight();
     void onRemoveSelected();
     void onSwitchCamera();
+    void onSetMaterial();
     void onClearScene();
     void onMove();
     void onRotate();
@@ -53,6 +54,7 @@ private:
     QDoubleSpinBox* _ySpin = nullptr;
     QDoubleSpinBox* _zSpin = nullptr;
     QComboBox*      _reprCombo = nullptr;
+    QComboBox* _materialCombo;
 
     void _setupUi();
     void _redraw();

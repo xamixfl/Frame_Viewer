@@ -115,3 +115,7 @@ void SceneManager::addLight(const std::shared_ptr<Light>& light) {
     if (!light) throw NullObjectError(__FILE__, "SceneManager", __FUNCTION__);
     _lights.push_back(light);
 }
+
+void SceneManager::removeLight(const std::shared_ptr<Light>& light) {
+    _lights.erase(std::remove(_lights.begin(), _lights.end(), light), _lights.end());
+}

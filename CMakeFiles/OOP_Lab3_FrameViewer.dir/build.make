@@ -594,10 +594,24 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/HistoryCommands.cpp.s: cmake_for
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/HistoryCommands.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/HistoryCommands.cpp -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/HistoryCommands.cpp.s
 
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o: src/command/SetMaterialCommand.cpp
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SetMaterialCommand.cpp
+
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SetMaterialCommand.cpp > CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.i
+
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SetMaterialCommand.cpp -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.s
+
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o: src/factory/QtDrawer.cpp
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/factory/QtDrawer.cpp
 
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.i: cmake_force
@@ -611,7 +625,7 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.s: cmake_force
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o: src/factory/QtDrawerFactory.cpp
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/factory/QtDrawerFactory.cpp
 
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.i: cmake_force
@@ -625,7 +639,7 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.s: cmake_for
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o: src/bridge/AssimpModelImpl.cpp
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/AssimpModelImpl.cpp
 
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.i: cmake_force
@@ -639,7 +653,7 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.s: cmake_forc
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.o: src/builder/AssimpModelBuilder.cpp
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/AssimpModelBuilder.cpp
 
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.i: cmake_force
@@ -653,7 +667,7 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/builder/AssimpModelBuilder.cpp.s: cmake_
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.o: src/director/AssimpDirector.cpp
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/director/AssimpDirector.cpp
 
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.i: cmake_force
@@ -667,7 +681,7 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDirector.cpp.s: cmake_for
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o: src/reader/AssimpReader.cpp
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/reader/AssimpReader.cpp
 
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.i: cmake_force
@@ -681,7 +695,7 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.s: cmake_force
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o: src/composite/Light.cpp
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/Light.cpp
 
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.i: cmake_force
@@ -695,7 +709,7 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.s: cmake_force
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o: src/bridge/LightImpl.cpp
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/LightImpl.cpp
 
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.i: cmake_force
@@ -706,10 +720,24 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/LightImpl.cpp -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.s
 
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o: src/data/MaterialPresets.cpp
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/MaterialPresets.cpp
+
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/MaterialPresets.cpp > CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.i
+
+CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/MaterialPresets.cpp -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.s
+
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/flags.make
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o: src/ui/MainWindow.cpp
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o: CMakeFiles/OOP_Lab3_FrameViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o -MF CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o.d -o CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o -c /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/ui/MainWindow.cpp
 
 CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.i: cmake_force
@@ -759,6 +787,7 @@ OOP_Lab3_FrameViewer_OBJECTS = \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SceneCommands.cpp.o" \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/TransformCommands.cpp.o" \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/HistoryCommands.cpp.o" \
+"CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o" \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o" \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o" \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o" \
@@ -767,6 +796,7 @@ OOP_Lab3_FrameViewer_OBJECTS = \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o" \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o" \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o" \
+"CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o" \
 "CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o"
 
 # External object files for target OOP_Lab3_FrameViewer
@@ -809,6 +839,7 @@ OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/CameraComm
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SceneCommands.cpp.o
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/TransformCommands.cpp.o
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/HistoryCommands.cpp.o
+OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/command/SetMaterialCommand.cpp.o
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawer.cpp.o
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/factory/QtDrawerFactory.cpp.o
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/AssimpModelImpl.cpp.o
@@ -817,6 +848,7 @@ OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/director/AssimpDir
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/reader/AssimpReader.cpp.o
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/composite/Light.cpp.o
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o
+OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/data/MaterialPresets.cpp.o
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/build.make
 OOP_Lab3_FrameViewer: /usr/lib64/libQt6Widgets.so.6.8.2
@@ -826,7 +858,7 @@ OOP_Lab3_FrameViewer: /usr/lib64/libGLX.so
 OOP_Lab3_FrameViewer: /usr/lib64/libOpenGL.so
 OOP_Lab3_FrameViewer: /usr/lib64/libQt6Core.so.6.8.2
 OOP_Lab3_FrameViewer: CMakeFiles/OOP_Lab3_FrameViewer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Linking CXX executable OOP_Lab3_FrameViewer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Linking CXX executable OOP_Lab3_FrameViewer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OOP_Lab3_FrameViewer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

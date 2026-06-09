@@ -30,6 +30,8 @@ OOP_Lab3_FrameViewer_autogen/timestamp: \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/ModelCommands.h \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SceneCommands.cpp \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SceneCommands.h \
+	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SetMaterialCommand.cpp \
+	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SetMaterialCommand.h \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/TransformCommands.cpp \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/TransformCommands.h \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/BaseObject.cpp \
@@ -44,6 +46,8 @@ OOP_Lab3_FrameViewer_autogen/timestamp: \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/Model.h \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/Scene.cpp \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/Scene.h \
+	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/MaterialPresets.cpp \
+	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/MaterialPresets.h \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Point.cpp \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Point.h \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/director/AssimpDirector.cpp \
@@ -93,6 +97,7 @@ OOP_Lab3_FrameViewer_autogen/timestamp: \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/RotateVisitor.h \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/ScaleVisitor.cpp \
 	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/ScaleVisitor.h \
+	/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/SetMaterialVisitor.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \

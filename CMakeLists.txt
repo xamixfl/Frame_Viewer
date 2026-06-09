@@ -73,7 +73,7 @@ set(DOMAIN_SOURCES
     src/command/SceneCommands.cpp
     src/command/TransformCommands.cpp
     src/command/HistoryCommands.cpp
-
+    src/command/SetMaterialCommand.cpp
     src/factory/QtDrawer.cpp
     src/factory/QtDrawerFactory.cpp
 
@@ -87,6 +87,8 @@ set(DOMAIN_SOURCES
     src/director/AssimpDirector.cpp
     src/composite/Light.cpp     
     src/bridge/LightImpl.cpp
+    src/data/MaterialPresets.cpp
+    src/visitor/SetMaterialVisitor.h
 )
 
 set(UI_SOURCES

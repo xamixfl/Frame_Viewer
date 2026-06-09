@@ -7,6 +7,7 @@ struct Material {
     std::array<float, 3> diffuse = {0.8f, 0.8f, 0.8f};
     std::array<float, 3> specular = {1.0f, 1.0f, 1.0f};
     float shininess = 32.0f;
+    float alpha = 1.0f;
     
     Material() = default;
 };

@@ -30,6 +30,10 @@ public:
 
     std::shared_ptr<Memento> createSnapshot() override;
     void restoreSnapshot(const std::shared_ptr<Memento>& snapshot) override;
+    
+    float getIntensity() const { 
+        return _impl->getIntensity();
+    }
 
 private:
     std::unique_ptr<BaseLightImpl> _impl;

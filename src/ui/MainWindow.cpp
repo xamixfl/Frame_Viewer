@@ -13,6 +13,7 @@
 #include "command/SceneCommands.h"
 #include "command/TransformCommands.h"
 #include "command/HistoryCommands.h"
+#include "command/SetMaterialCommand.h"
 #include "composite/Model.h"
 #include "composite/Camera.h"
 #include "composite/BaseObject.h"
@@ -29,6 +30,8 @@
 #include "builder/AssimpModelBuilder.h"
 #include "composite/Light.h"
 #include "bridge/LightImpl.h"
+#include "visitor/SetMaterialVisitor.h"
+#include "data/MaterialPresets.h"
 
 #include <QGraphicsScene>
 #include <QGraphicsView>
@@ -191,6 +194,24 @@ void MainWindow::_setupUi() {
 
     sidebar->addStretch(0);
 
+    _materialCombo = new QComboBox(this);
+
+    auto* materialBox = new QGroupBox("Материал модели");
+    auto* mLayout     = new QVBoxLayout(materialBox);
+    
+    _materialCombo->addItem("Стальной");
+    _materialCombo->addItem("Пластик");
+    _materialCombo->addItem("Золотой");
+    _materialCombo->addItem("Стеклянный");
+    _materialCombo->addItem("Матовый");
+    
+    
+    auto* applyMaterialBtn = new QPushButton("Применить материал");
+    
+    mLayout->addWidget(_materialCombo);
+    mLayout->addWidget(applyMaterialBtn);
+    sidebar->addWidget(materialBox);
+
     setCentralWidget(central);
     statusBar()->showMessage("Готов");
 
@@ -206,6 +227,7 @@ void MainWindow::_setupUi() {
     connect(scaleBtn,      &QPushButton::clicked, this, &MainWindow::onScale);
     connect(_undoBtn,      &QPushButton::clicked, this, &MainWindow::onUndo);
     connect(_redoBtn,      &QPushButton::clicked, this, &MainWindow::onRedo);
+    connect(applyMaterialBtn, &QPushButton::clicked, this, &MainWindow::onSetMaterial);
 }
 
 void MainWindow::_redraw() {
@@ -463,4 +485,19 @@ void MainWindow::onRedo() {
     _refreshHistory();
     _redraw();
     statusBar()->showMessage("Повтор выполнен");
+}
+
+void MainWindow::onSetMaterial() {
+    auto ids = _selectedIds();
+    if (ids.empty()) return;
+
+    // Берем материал из пресетов по текущему индексу комбо-бокса
+    Material newMaterial = MaterialPresets::getPreset(_materialCombo->currentIndex());
+
+    auto& sm = _facade->getSceneManager();
+    auto& hm = _facade->getHistoryManager();
+    
+    _safeExecute(std::make_unique<SetMaterialCommand>(sm, hm, std::move(ids), newMaterial), "Ошибка применения материала");
+    _refreshHistory();
+    _redraw();
 }

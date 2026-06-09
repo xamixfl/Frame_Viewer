@@ -396,6 +396,8 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o: \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SceneCommand.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/TransformCommands.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/HistoryCommands.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SetMaterialCommand.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Material.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/Model.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/VisibleObject.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/Camera.h \
@@ -429,11 +431,15 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o: \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/AssimpModelBuilder.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Point.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Face.h \
- /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Material.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/CarcasModelBuilder.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/CarcasCameraBuilder.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/SceneBuilder.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/LightImpl.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/SetMaterialVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/BaseModelImpl.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Edge.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/MaterialPresets.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Material.h \
  /usr/include/qt6/QtWidgets/QGraphicsScene \
  /usr/include/qt6/QtWidgets/qgraphicsscene.h \
  /usr/include/qt6/QtGui/qpen.h /usr/include/qt6/QtWidgets/QGraphicsView \

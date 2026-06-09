@@ -456,6 +456,12 @@
 			null
 		],
 		[
+			"/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SetMaterialCommand.h",
+			"MU",
+			"YB4PXEL5CK/moc_SetMaterialCommand.cpp",
+			null
+		],
+		[
 			"/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/TransformCommands.h",
 			"MU",
 			"YB4PXEL5CK/moc_TransformCommands.cpp",
@@ -495,6 +501,12 @@
 			"/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/Scene.h",
 			"MU",
 			"4NMUJRZDSI/moc_Scene.cpp",
+			null
+		],
+		[
+			"/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/MaterialPresets.h",
+			"MU",
+			"SG3YC7EIDC/moc_MaterialPresets.cpp",
 			null
 		],
 		[
@@ -640,6 +652,12 @@
 			"MU",
 			"JQXXMK27WX/moc_ScaleVisitor.cpp",
 			null
+		],
+		[
+			"/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/SetMaterialVisitor.h",
+			"MU",
+			"JQXXMK27WX/moc_SetMaterialVisitor.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -767,6 +785,11 @@
 			null
 		],
 		[
+			"/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/SetMaterialCommand.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/command/TransformCommands.cpp",
 			"MU",
 			null
@@ -798,6 +821,11 @@
 		],
 		[
 			"/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/composite/Scene.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/MaterialPresets.cpp",
 			"MU",
 			null
 		],

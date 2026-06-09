@@ -41,6 +41,7 @@ public:
     void addDefaultCamera();
 
     void addLight(const std::shared_ptr<Light>& light);
+    void removeLight(const std::shared_ptr<Light>& light);
     
     [[nodiscard]] std::shared_ptr<CompositeObject> buildVisibleComposite() const;
     [[nodiscard]] std::shared_ptr<CompositeObject> buildInvisibleComposite() const;
