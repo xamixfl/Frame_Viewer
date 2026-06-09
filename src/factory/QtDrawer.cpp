@@ -38,7 +38,6 @@ void QtDrawer::drawPolygon(const std::vector<Point>& vertices, const Material& m
     }
     path.closeSubpath();
 
-    // 1. Формируем цвет из материала
     QColor color = QColor::fromRgbF(mat.diffuse[0], mat.diffuse[1], mat.diffuse[2]);
     QBrush brush(color);
 

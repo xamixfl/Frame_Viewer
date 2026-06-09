@@ -196,4 +196,6 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/visitor/RotateVisitor.cpp.o: \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Edge.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Face.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Material.h \
- /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/BaseCameraImpl.h
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/BaseCameraImpl.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/BaseLightImpl.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/../data/Point.h

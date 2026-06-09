@@ -1,6 +1,7 @@
 #include "visitor/ScaleVisitor.h"
 #include "bridge/BaseModelImpl.h"
 #include "bridge/BaseCameraImpl.h"
+#include "bridge/BaseLightImpl.h"
 
 void ScaleVisitor::visit(BaseModelImpl& impl) noexcept {
     auto& points = impl.getPoints();
@@ -26,7 +27,8 @@ void ScaleVisitor::visit(BaseModelImpl& impl) noexcept {
 
 void ScaleVisitor::visit(BaseCameraImpl& /*impl*/) noexcept {}
 
-void ScaleVisitor::visit(BaseLightImpl& /*impl*/) noexcept {
-    // Здесь пусто. 
-    // Мы оставляем комментарий, чтобы показать, что это сделано намеренно.
+void ScaleVisitor::visit(BaseLightImpl& impl) noexcept {
+    Point pos = impl.getPosition();
+    pos.scale(_transform.getX(), _transform.getY(), _transform.getZ());
+    impl.setPosition(pos);
 }

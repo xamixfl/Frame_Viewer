@@ -1,6 +1,7 @@
 #include "visitor/RotateVisitor.h"
 #include "bridge/BaseModelImpl.h"
 #include "bridge/BaseCameraImpl.h"
+#include "bridge/BaseLightImpl.h"
 
 void RotateVisitor::visit(BaseModelImpl& impl) noexcept {
     auto& points = impl.getPoints();
@@ -34,7 +35,8 @@ void RotateVisitor::visit(BaseCameraImpl& impl) noexcept {
     impl.setUp(up);
 }
 
-void RotateVisitor::visit(BaseLightImpl& /*impl*/) noexcept {
-    // Здесь пусто. 
-    // Мы оставляем комментарий, чтобы показать, что это сделано намеренно.
+void RotateVisitor::visit(BaseLightImpl& impl) noexcept {
+    Point pos = impl.getPosition();
+    pos.rotate(_transform.getX(), _transform.getY(), _transform.getZ());
+    impl.setPosition(pos);
 }

@@ -21,11 +21,6 @@ public:
     void visit(BaseLightImpl& impl) noexcept override;
 
 private:
-    // Математические помощники теперь внутри Визитора
-    bool isFaceVisible(const std::vector<Point>& points, const Face& face, const Point& cameraPos) const;
-    bool isEdgeVisible(const Edge& edge, const std::vector<Face>& faces, const std::vector<Point>& points, const Point& cameraPos) const;
-    bool edgeInFace(const Edge& edge, const Face& face) const;
-
     std::vector<BaseLightImpl*> _lights;
 
     AbstractDrawerFactory& _factory;

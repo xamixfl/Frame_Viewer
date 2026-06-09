@@ -11,6 +11,7 @@
 #include <cmath>
 #include <vector>
 #include <cstdio>
+#include <algorithm>
 
 namespace {
 
@@ -54,28 +55,16 @@ Point project(const ViewPoint& vp) noexcept {
     return { vp.x / vp.z * FOCAL, vp.y / vp.z * FOCAL, 0.0 };
 }
 
-bool clipNear(ViewPoint& a, ViewPoint& b) noexcept {
-    const bool aIn = a.z >= NEAR_Z;
-    const bool bIn = b.z >= NEAR_Z;
-    if (aIn && bIn) {
-        return true;
+struct RenderablePolygon {
+    std::vector<Point> projectedPoints;
+    Material material;
+    double depthZ; // Глубина (расстояние до камеры)
+
+    // Сортировка по убыванию глубины (от дальних к ближним - алгоритм живописца)
+    bool operator<(const RenderablePolygon& other) const noexcept {
+        return depthZ > other.depthZ;
     }
-    if (!aIn && !bIn) {
-        return false;
-    }
-    const double t = (NEAR_Z - a.z) / (b.z - a.z);
-    const ViewPoint i {
-        a.x + t * (b.x - a.x),
-        a.y + t * (b.y - a.y),
-        NEAR_Z
-    };
-    if (!aIn) {
-        a = i;
-    } else {
-        b = i;
-    }
-    return true;
-}
+};
 
 } // namespace
 
@@ -84,6 +73,7 @@ DrawVisitor::DrawVisitor(AbstractDrawerFactory& factory, std::shared_ptr<Camera>
 
 void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
     auto drawer = _factory.createDrawer();
+    drawer->clear();
     const std::vector<Face>& faces = impl.getFaces();
     const std::vector<Point>& points = impl.getPoints();
 
@@ -105,6 +95,8 @@ void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
         return;
     }
 
+    std::vector<RenderablePolygon> renderQueue;
+
     for (size_t i = 0; i < faces.size(); ++i) {
         const auto& face = faces[i];
         if (!impl.isFaceVisible(i, _camera->_impl->getPosition())) continue;
@@ -121,32 +113,42 @@ void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
             light->getIntensityAt(p1, normal, lr, lg, lb);
             r += lr; g += lg; b += lb;
         }
-        printf("Final Color: R=%f, G=%f, B=%f\n", r, g, b);
 
         Material lightedMat = impl.getMaterial();
 
         std::vector<Point> projectedPoints;
         bool visible = true;
+        double totalZ = 0.0;
+        
         for (int index : face) {
             ViewPoint vp = toView(points[index], vb);
             if (vp.z <= 0) { visible = false; break; }
             projectedPoints.push_back(project(vp));
+            totalZ += vp.z;
         }
 
         if (visible && projectedPoints.size() >= 3) {
             auto clamp = [](float val) { return std::max(0.0f, std::min(1.0f, val)); };
             
-            // Используем значения ambient (0.2) + свет, накопленные в переменных r, g, b
             lightedMat.diffuse[0] = clamp(lightedMat.diffuse[0] * r);
             lightedMat.diffuse[1] = clamp(lightedMat.diffuse[1] * g);
             lightedMat.diffuse[2] = clamp(lightedMat.diffuse[2] * b);
             
-            drawer->drawPolygon(projectedPoints, lightedMat);
+            double avgZ = totalZ / face.size();
+            renderQueue.push_back({std::move(projectedPoints), lightedMat, avgZ});
         }
+    }
+
+    // Сортируем полигоны от дальних к ближним
+    std::sort(renderQueue.begin(), renderQueue.end());
+
+    // Отрисовываем по порядку
+    for (const auto& poly : renderQueue) {
+        drawer->drawPolygon(poly.projectedPoints, poly.material);
     }
 }
 
-void DrawVisitor::visit(BaseCameraImpl& /*impl*/) noexcept {}
+void DrawVisitor::visit(BaseCameraImpl&) noexcept {}
 
 void DrawVisitor::visit(BaseLightImpl& impl) noexcept {
     _lights.push_back(&impl);

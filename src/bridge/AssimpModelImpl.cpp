@@ -1,6 +1,7 @@
 #include "bridge/AssimpModelImpl.h"
 #include "data/Point.h"
 #include "memento/Memento.h"
+#include <cstdio>
 
 namespace {}
 
@@ -12,7 +13,11 @@ bool AssimpModelImpl::faceVisible(const std::vector<Point>& points, const Face& 
     const Point& a = points[face[0]];
     const Point& b = points[face[1]];
     const Point& c = points[face[2]];
-    return dot(cross(sub(b, a), sub(c, a)), sub(camPos, a)) > 0.0;
+    
+    double result = dot(cross(sub(b, a), sub(c, a)), sub(camPos, a));
+    printf("Face visible result: %f\n", result);
+    
+    return result > 0.0;
 }
 
 bool AssimpModelImpl::isFaceVisible(size_t faceIndex, const Point& cameraPos) const {
