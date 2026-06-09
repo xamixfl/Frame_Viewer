@@ -10,6 +10,7 @@
 
 #include <cmath>
 #include <vector>
+#include <cstdio>
 
 namespace {
 
@@ -106,40 +107,40 @@ void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
 
     for (size_t i = 0; i < faces.size(); ++i) {
         const auto& face = faces[i];
-
-        if (!impl.isFaceVisible(i, _camera->_impl->getPosition())) {
-            continue;
-        }
+        if (!impl.isFaceVisible(i, _camera->_impl->getPosition())) continue;
 
         const Point& p1 = points[face[0]];
         const Point& p2 = points[face[1]];
         const Point& p3 = points[face[2]];
-        Point normal = normalize(cross(sub(p2, p1), sub(p3, p1)));
 
-        float r = 0.0f, g = 0.0f, b = 0.0f;
+        Point normal = normalize(cross(sub(p3, p1), sub(p2, p1)));
+
+        float r = 0.2f, g = 0.2f, b = 0.2f; // Ambient
         for (const auto& light : _lights) {
             float lr, lg, lb;
             light->getIntensityAt(p1, normal, lr, lg, lb);
             r += lr; g += lg; b += lb;
         }
+        printf("Final Color: R=%f, G=%f, B=%f\n", r, g, b);
 
         Material lightedMat = impl.getMaterial();
-        for (int j = 0; j < 3; ++j) {
-            lightedMat.diffuse[j] *= r; 
-        }
 
         std::vector<Point> projectedPoints;
         bool visible = true;
         for (int index : face) {
             ViewPoint vp = toView(points[index], vb);
-            if (vp.z <= 0) { 
-                visible = false; 
-                break; 
-            }
+            if (vp.z <= 0) { visible = false; break; }
             projectedPoints.push_back(project(vp));
         }
 
         if (visible && projectedPoints.size() >= 3) {
+            auto clamp = [](float val) { return std::max(0.0f, std::min(1.0f, val)); };
+            
+            // Используем значения ambient (0.2) + свет, накопленные в переменных r, g, b
+            lightedMat.diffuse[0] = clamp(lightedMat.diffuse[0] * r);
+            lightedMat.diffuse[1] = clamp(lightedMat.diffuse[1] * g);
+            lightedMat.diffuse[2] = clamp(lightedMat.diffuse[2] * b);
+            
             drawer->drawPolygon(projectedPoints, lightedMat);
         }
     }

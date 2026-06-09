@@ -4,6 +4,7 @@
 #include <memory>
 
 #include "manager/BaseManager.h"
+#include "visitor/DrawVisitor.h"
 
 class BaseObject;
 class Camera;
@@ -18,7 +19,7 @@ public:
     DrawManager(const DrawManager&) = delete;
     DrawManager& operator=(const DrawManager&) = delete;
 
-    void draw(BaseObject& obj, std::shared_ptr<Camera> camera);
+    void draw(BaseObject& obj, std::shared_ptr<DrawVisitor> visitor);
     void drawScene(SceneManager& sceneMgr);
 
 private:

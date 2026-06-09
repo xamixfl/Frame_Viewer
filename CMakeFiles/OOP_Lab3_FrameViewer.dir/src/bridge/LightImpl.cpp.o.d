@@ -94,4 +94,11 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/bridge/LightImpl.cpp.o: \
  /usr/include/c++/14/tr1/modified_bessel_func.tcc \
  /usr/include/c++/14/tr1/poly_hermite.tcc \
  /usr/include/c++/14/tr1/poly_laguerre.tcc \
- /usr/include/c++/14/tr1/riemann_zeta.tcc
+ /usr/include/c++/14/tr1/riemann_zeta.tcc /usr/include/c++/14/cstdio \
+ /usr/include/stdio.h \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
+ /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
+ /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
+ /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
+ /usr/include/bits/types/cookie_io_functions_t.h \
+ /usr/include/bits/stdio_lim.h

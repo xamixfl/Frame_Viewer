@@ -372,6 +372,12 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o: \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/../data/Point.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/manager/TransformManager.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/manager/DrawManager.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/DrawVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/BaseVisitor.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/../data/Point.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/../data/Face.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/../data/Edge.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/../data/Material.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/manager/HistoryManager.h \
  /usr/include/c++/14/stack /usr/include/c++/14/deque \
  /usr/include/c++/14/bits/stl_deque.h /usr/include/c++/14/bits/deque.tcc \

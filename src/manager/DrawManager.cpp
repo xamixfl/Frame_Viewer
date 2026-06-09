@@ -6,8 +6,7 @@
 
 DrawManager::DrawManager(AbstractDrawerFactory& factory) noexcept : _factory(factory) {}
 
-void DrawManager::draw(BaseObject& obj, std::shared_ptr<Camera> camera) {
-    auto visitor = std::make_shared<DrawVisitor>(_factory, std::move(camera));
+void DrawManager::draw(BaseObject& obj, std::shared_ptr<DrawVisitor> visitor) {
     obj.accept(visitor);
 }
 
@@ -19,5 +18,6 @@ void DrawManager::drawScene(SceneManager& sceneMgr) {
     }
 
     auto visible = sceneMgr.buildVisibleComposite();
-    draw(*visible, sceneMgr.getActiveCamera());
+
+    draw(*visible, visitor); 
 }
