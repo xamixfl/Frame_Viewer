@@ -222,7 +222,7 @@ void MainWindow::_refreshObjectList() {
         QString type;
         if (std::dynamic_pointer_cast<Model>(obj))       type = "Model";
         else if (std::dynamic_pointer_cast<Camera>(obj)) type = "Camera";
-        else                                             type = "Object";
+        else                                             type = "Light";
 
         const QString text = QString("[id=%1] %2").arg(obj->getId()).arg(type);
         auto* item = new QListWidgetItem(text);
