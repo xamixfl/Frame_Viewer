@@ -8,4 +8,4 @@ public:
     ~CameraCommand() override = default;
 };
 
-#endif // CAMERACOMMAND_H
+#endif 

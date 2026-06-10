@@ -14,4 +14,4 @@ public:
     virtual void visit(BaseLightImpl& impl) noexcept = 0; 
 };
 
-#endif // BASEVISITOR_H
+#endif 

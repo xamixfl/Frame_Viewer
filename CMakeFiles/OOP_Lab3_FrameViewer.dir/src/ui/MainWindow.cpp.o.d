@@ -413,27 +413,12 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/ui/MainWindow.cpp.o: \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/director/CarcasCameraDirector.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/director/SceneDirector.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/director/AssimpDirector.h \
- /usr/include/assimp/Importer.hpp /usr/include/assimp/types.h \
- /usr/include/assimp/defs.h /usr/include/assimp/config.h \
- /usr/include/assimp/vector2.h /usr/include/assimp/vector3.h \
- /usr/include/assimp/color4.h /usr/include/assimp/matrix3x3.h \
- /usr/include/assimp/matrix4x4.h /usr/include/assimp/quaternion.h \
- /usr/include/assimp/vector2.inl /usr/include/assimp/vector3.inl \
- /usr/include/assimp/color4.inl /usr/include/assimp/matrix3x3.inl \
- /usr/include/assimp/matrix4x4.inl /usr/include/assimp/MathFunctions.h \
- /usr/include/assimp/quaternion.inl /usr/include/assimp/scene.h \
- /usr/include/assimp/texture.h /usr/include/assimp/Compiler/pushpack1.h \
- /usr/include/assimp/Compiler/poppack1.h /usr/include/assimp/mesh.h \
- /usr/include/assimp/aabb.h /usr/include/assimp/light.h \
- /usr/include/assimp/camera.h /usr/include/assimp/material.h \
- /usr/include/assimp/material.inl /usr/include/assimp/anim.h \
- /usr/include/assimp/metadata.h /usr/include/assimp/postprocess.h \
- /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/AssimpModelBuilder.h \
- /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Point.h \
- /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Face.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/CarcasModelBuilder.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/CarcasCameraBuilder.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Point.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/SceneBuilder.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/builder/AssimpModelBuilder.h \
+ /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/data/Face.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/LightImpl.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/visitor/SetMaterialVisitor.h \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/bridge/BaseModelImpl.h \

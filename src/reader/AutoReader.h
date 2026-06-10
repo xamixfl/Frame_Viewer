@@ -25,4 +25,4 @@ private:
     [[nodiscard]] static std::unique_ptr<BaseReader> _selectReader(const std::string& filename);
 };
 
-#endif // AUTOREADER_H
+#endif 

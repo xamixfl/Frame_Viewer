@@ -32,4 +32,4 @@ private:
     std::unique_ptr<BaseCompositeImpl> _impl;
 };
 
-#endif // COMPOSITEOBJECT_H
+#endif 

@@ -14,7 +14,7 @@ public:
     void getIntensityAt(const Point& point, const Point& normal, 
                     float& r, float& g, float& b) const noexcept override;
                     
-    // Реализация новых методов
+    // работа с позицией света
     void setPosition(const Point& pos) noexcept override { _pos = pos; }
     Point getPosition() const noexcept override { return _pos; }
     float getIntensity() const noexcept override;
@@ -22,7 +22,7 @@ public:
 private:
     float _r, _g, _b;
     float _intensity;
-    Point _pos; // Добавлено поле позиции
+    Point _pos; 
 };
 
 #endif

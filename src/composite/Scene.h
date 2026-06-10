@@ -32,4 +32,4 @@ private:
     ObjectList _objects;
 };
 
-#endif // SCENE_H
+#endif 

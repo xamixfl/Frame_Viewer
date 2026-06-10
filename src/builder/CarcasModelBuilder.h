@@ -27,4 +27,4 @@ private:
     void _readFaces() const;
 };
 
-#endif // CARCASMODELBUILDER_H
+#endif 

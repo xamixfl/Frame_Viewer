@@ -32,4 +32,4 @@ private:
     Point _up;
 };
 
-#endif // CARCASCAMERA_H
+#endif 

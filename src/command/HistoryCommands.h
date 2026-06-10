@@ -29,4 +29,4 @@ private:
     HistoryManager& _historyMgr;
 };
 
-#endif // HISTORYCOMMANDS_H
+#endif 

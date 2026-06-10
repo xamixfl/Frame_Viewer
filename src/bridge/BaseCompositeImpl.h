@@ -21,4 +21,4 @@ public:
     virtual bool remove(Iterator it) noexcept = 0;
 };
 
-#endif // BASECOMPOSITEIMPL_H
+#endif

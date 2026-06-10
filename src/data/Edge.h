@@ -14,4 +14,4 @@ private:
     int b;
 };
 
-#endif // EDGE_H
+#endif 

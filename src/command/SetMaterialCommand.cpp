@@ -18,11 +18,6 @@ SetMaterialCommand::SetMaterialCommand(
       _material(material) {}
 
 void SetMaterialCommand::execute() {
-    // Опционально: если требуется поддержка Undo/Redo для смены материала,
-    // здесь можно создать и сохранить снимок (снэпшот) состояния объектов до их изменения.
-    // Пример: auto snapshot = _sceneMgr.createSnapshots(_ids);
-    // _historyMgr.push(snapshot);
-
     for (size_t id : _ids) {
         auto obj = _sceneMgr.getObject(id);
         if (obj) {

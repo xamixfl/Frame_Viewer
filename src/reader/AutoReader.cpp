@@ -17,7 +17,7 @@ std::string toLower(std::string s) {
     return s;
 }
 
-} // namespace
+} 
 
 std::unique_ptr<BaseReader> AutoReader::_selectReader(const std::string& filename) {
     const std::string ext = toLower(std::filesystem::path(filename).extension().string());

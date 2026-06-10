@@ -64,4 +64,4 @@ private:
     size_t _id;
 };
 
-#endif // CAMERACOMMANDS_H
+#endif 

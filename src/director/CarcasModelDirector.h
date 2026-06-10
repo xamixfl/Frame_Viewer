@@ -17,4 +17,4 @@ private:
     std::unique_ptr<CarcasModelBuilder> _builder;
 };
 
-#endif // CARCASMODELDIRECTOR_H
+#endif 

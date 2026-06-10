@@ -23,4 +23,4 @@ private:
     Material _material;
 };
 
-#endif // SETMATERIALVISITOR_H
+#endif 

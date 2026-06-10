@@ -34,4 +34,4 @@ Point sub(const Point& a, const Point& b) noexcept;
 Point normalize(const Point& a) noexcept;
 Point cross(const Point& a, const Point& b) noexcept;
 
-#endif // POINT_H
+#endif

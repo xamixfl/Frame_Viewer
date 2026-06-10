@@ -8,4 +8,4 @@ public:
     ~SceneCommand() override = default;
 };
 
-#endif // SCENECOMMAND_H
+#endif

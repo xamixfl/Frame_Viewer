@@ -32,7 +32,7 @@ namespace MaterialPresets {
             case Type::Gold: // Максимально выраженный металл с резким зеркальным блеском
                 mat.ambient = {0.25f, 0.20f, 0.08f};
                 mat.diffuse = {0.75f, 0.60f, 0.23f};
-                mat.specular = {1.0f, 0.9f, 0.7f}; // ОЧЕНЬ высокий уровень зеркальности
+                mat.specular = {1.0f, 0.9f, 0.7f}; // высокий уровень зеркальности
                 mat.shininess = 128.0f; // Очень узкий, сфокусированный и яркий блик
                 mat.alpha = 1.0f;
                 break;

@@ -28,4 +28,4 @@ public:
     ~BaseException() override = default;
 };
 
-#endif // BASEEXCEPTION_H
+#endif

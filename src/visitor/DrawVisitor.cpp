@@ -58,15 +58,15 @@ Point project(const ViewPoint& vp) noexcept {
 struct RenderablePolygon {
     std::vector<Point> projectedPoints;
     Material material;
-    double depthZ; // Глубина (расстояние до камеры)
+    double depthZ; // Глубина 
 
-    // Сортировка по убыванию глубины (от дальних к ближним - алгоритм живописца)
+    // Сортировка по убыванию глубины 
     bool operator<(const RenderablePolygon& other) const noexcept {
         return depthZ > other.depthZ;
     }
 };
 
-} // namespace
+} 
 
 DrawVisitor::DrawVisitor(AbstractDrawerFactory& factory, std::shared_ptr<Camera> camera) noexcept
     : _factory(factory), _camera(std::move(camera)) {}
@@ -139,10 +139,9 @@ void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
         }
     }
 
-    // Сортируем полигоны от дальних к ближним
+    // Сортировка полигонов по глубине 
     std::sort(renderQueue.begin(), renderQueue.end());
 
-    // Отрисовываем по порядку
     for (const auto& poly : renderQueue) {
         drawer->drawPolygon(poly.projectedPoints, poly.material);
     }

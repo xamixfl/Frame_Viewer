@@ -29,4 +29,4 @@ private:
     void _assembleResult();
 };
 
-#endif // CARCASCAMERABUILDER_H
+#endif

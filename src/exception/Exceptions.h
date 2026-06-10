@@ -160,4 +160,4 @@ public:
     ) noexcept : BaseException(formatMsg(id).c_str(), file, classname, function) {}
 };
 
-#endif // EXCEPTIONS_H
+#endif

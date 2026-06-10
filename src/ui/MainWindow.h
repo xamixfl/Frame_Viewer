@@ -67,4 +67,4 @@ private:
     [[nodiscard]] std::vector<size_t> _selectedIds() const;
 };
 
-#endif // MAINWINDOW_H
+#endif 

@@ -32,4 +32,4 @@ private:
     std::unique_ptr<Solution> _solution;
 };
 
-#endif // LOADMANAGER_H
+#endif

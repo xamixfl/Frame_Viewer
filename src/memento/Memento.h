@@ -61,7 +61,6 @@ class LightMemento final : public Memento {
 public:
     ~LightMemento() override = default;
 private:
-    // Позволяем классу Light обращаться к приватным полям для сохранения/восстановления
     friend class Light; 
 
     LightMemento(Point pos, float intensity) noexcept;
@@ -70,4 +69,4 @@ private:
     float intensity;
 };
 
-#endif // MEMENTO_H
+#endif

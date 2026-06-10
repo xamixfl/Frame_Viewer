@@ -15,4 +15,4 @@ public:
     virtual void drawPolygon(const std::vector<Point>& vertices, const Material& mat) = 0;
 };
 
-#endif // BASEDRAWER_H
+#endif

@@ -16,4 +16,4 @@ public:
     [[nodiscard]] virtual bool eof() const noexcept = 0;
 };
 
-#endif // BASEREADER_H
+#endif 

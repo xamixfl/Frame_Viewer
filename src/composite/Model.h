@@ -22,4 +22,4 @@ private:
     std::unique_ptr<BaseModelImpl> _impl;
 };
 
-#endif // MODEL_H
+#endif

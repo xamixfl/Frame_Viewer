@@ -25,4 +25,4 @@ private:
     ChildrenList _children;
 };
 
-#endif // VECTORCOMPOSITEIMPL_H
+#endif 

@@ -46,4 +46,4 @@ private:
     std::stack<Snapshot> _redo;
 };
 
-#endif // HISTORYMANAGER_H
+#endif 

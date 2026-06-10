@@ -12,4 +12,4 @@ struct Material {
     Material() = default;
 };
 
-#endif // MATERIAL_H
+#endif 

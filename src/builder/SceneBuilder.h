@@ -21,4 +21,4 @@ private:
     void _initImpl();
 };
 
-#endif // SCENEBUILDER_H
+#endif 

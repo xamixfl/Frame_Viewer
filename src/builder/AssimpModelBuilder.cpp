@@ -37,5 +37,4 @@ void AssimpModelBuilder::_initModel() noexcept {
     _model = std::make_unique<AssimpModelImpl>();
 }
 
-// Пустой build(), так как сборкой управляет Director
-void AssimpModelBuilder::build() {}
+void AssimpModelBuilder::build() {} // Пустой билд , так как сборкой управляет директор

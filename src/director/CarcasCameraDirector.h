@@ -17,4 +17,4 @@ private:
     std::unique_ptr<CarcasCameraBuilder> _builder;
 };
 
-#endif // CARCASCAMERADIRECTOR_H
+#endif 

@@ -11,4 +11,4 @@ enum class LoadId : std::size_t {
     AssimpModel = 5,
 };
 
-#endif // LOADID_H
+#endif

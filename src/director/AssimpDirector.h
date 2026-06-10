@@ -2,21 +2,19 @@
 #define ASSIMPDIRECTOR_H
 
 #include "director/BaseDirector.h"
-#include <assimp/Importer.hpp>
-#include <assimp/scene.h>
-#include <assimp/postprocess.h>
-#include "builder/AssimpModelBuilder.h"
+#include <memory>
+
+class AssimpModelBuilder;
 
 class AssimpDirector : public BaseDirector {
 public:
-    explicit AssimpDirector(std::unique_ptr<AssimpModelBuilder> builder);
+    explicit AssimpDirector(std::unique_ptr<AssimpModelBuilder> builder) noexcept;
+    ~AssimpDirector() override = default;
+
     std::shared_ptr<BaseObject> construct(const std::string& filename) override;
 
 private:
     std::unique_ptr<AssimpModelBuilder> _builder;
-    void processNode(aiNode* node, const aiScene* scene, AssimpModelBuilder& builder);
-
-    
 };
 
 #endif

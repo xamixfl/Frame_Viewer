@@ -17,4 +17,4 @@ private:
     QGraphicsScene& _scene;
 };
 
-#endif // QTDRAWERFACTORY_H
+#endif 

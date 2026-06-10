@@ -10,4 +10,4 @@ public:
     [[nodiscard]] bool isVisible() const noexcept override { return false; }
 };
 
-#endif // INVISIBLEOBJECT_H
+#endif

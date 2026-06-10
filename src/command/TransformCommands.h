@@ -68,4 +68,4 @@ public:
     [[nodiscard]] std::string name() const override { return "Scale " + _idsString(); }
 };
 
-#endif // TRANSFORMCOMMANDS_H
+#endif

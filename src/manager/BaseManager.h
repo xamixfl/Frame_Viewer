@@ -6,4 +6,4 @@ public:
     virtual ~BaseManager() = default;
 };
 
-#endif // BASEMANAGER_H
+#endif 

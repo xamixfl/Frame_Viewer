@@ -5,4 +5,4 @@
 
 using Face = std::vector<int>;
 
-#endif // FACE_H
+#endif

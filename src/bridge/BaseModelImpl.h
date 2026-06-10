@@ -35,4 +35,4 @@ public:
     virtual Material getMaterial() const noexcept = 0;
 };
 
-#endif // BASEMODELIMPL_H
+#endif 

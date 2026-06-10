@@ -26,4 +26,4 @@ private:
     AbstractDrawerFactory& _factory;
 };
 
-#endif // DRAWMANAGER_H
+#endif 

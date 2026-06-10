@@ -26,4 +26,4 @@ public:
                     const std::vector<size_t>& ids, const Transform& t, const std::string& opName);
 };
 
-#endif // TRANSFORMMANAGER_H
+#endif

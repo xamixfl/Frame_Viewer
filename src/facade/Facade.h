@@ -38,4 +38,4 @@ private:
     std::unique_ptr<HistoryManager> _historyMgr;
 };
 
-#endif // FACADE_H
+#endif

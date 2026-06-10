@@ -23,4 +23,4 @@ private:
     std::ifstream _stream;
 };
 
-#endif // FILEREADER_H
+#endif 

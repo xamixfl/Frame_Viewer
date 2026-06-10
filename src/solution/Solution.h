@@ -30,4 +30,4 @@ private:
     CallbackMap _callbacks;
 };
 
-#endif // SOLUTION_H
+#endif 

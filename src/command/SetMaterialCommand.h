@@ -26,4 +26,4 @@ private:
     Material _material;
 };
 
-#endif // SETMATERIALCOMMAND_H
+#endif

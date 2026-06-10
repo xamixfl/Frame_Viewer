@@ -24,4 +24,4 @@ private:
     std::ifstream _stream;
 };
 
-#endif // BINARYREADER_H
+#endif 

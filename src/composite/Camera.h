@@ -24,4 +24,4 @@ private:
     friend class DrawVisitor;
 };
 
-#endif // CAMERA_H
+#endif

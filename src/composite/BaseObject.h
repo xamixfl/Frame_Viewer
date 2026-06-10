@@ -38,4 +38,4 @@ private:
     static size_t& nextId() noexcept;
 };
 
-#endif // BASEOBJECT_H
+#endif 

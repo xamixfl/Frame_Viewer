@@ -55,4 +55,4 @@ private:
     std::vector<std::shared_ptr<Light>> _lights;
 };
 
-#endif // SCENEMANAGER_H
+#endif 

@@ -27,4 +27,4 @@ private:
     std::shared_ptr<Camera> _camera;
 };
 
-#endif // DRAWVISITOR_H
+#endif 

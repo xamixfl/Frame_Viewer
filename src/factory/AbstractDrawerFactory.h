@@ -12,4 +12,4 @@ public:
     [[nodiscard]] virtual std::unique_ptr<BaseDrawer> createDrawer() = 0;
 };
 
-#endif // ABSTRACTDRAWERFACTORY_H
+#endif
