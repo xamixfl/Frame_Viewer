@@ -5,7 +5,6 @@
 #include "visitor/BaseVisitor.h"
 #include "../data/Point.h" 
 #include "../data/Face.h"  
-#include "../data/Edge.h"
 #include "../data/Material.h"
 
 class AbstractDrawerFactory;

@@ -19,11 +19,6 @@ void LoadManager::loadModel(SceneManager& sceneMgr, LoadId id, const std::string
     sceneMgr.addObject(load(id, filename));
 }
 
-void LoadManager::loadCamera(SceneManager& sceneMgr, const std::string& filename) {
-    sceneMgr.addObject(load(LoadId::Camera, filename));
-}
-
-void LoadManager::loadScene(SceneManager& sceneMgr, HistoryManager& historyMgr, const std::string& filename) {
-    sceneMgr.setScene(load(LoadId::Scene, filename));
-    historyMgr.clear();
+void LoadManager::loadCamera(SceneManager& sceneMgr, LoadId id, const std::string& filename) {
+    sceneMgr.addObject(load(id, filename));
 }

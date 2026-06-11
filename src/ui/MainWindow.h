@@ -26,7 +26,6 @@ public:
 
 private slots:
     void onLoadModel();
-    void onLoadCamera();
     void onAddDefaultCamera();
     void onAddDefaultLight();
     void onRemoveSelected();

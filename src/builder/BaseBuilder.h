@@ -22,4 +22,4 @@ protected:
     std::unique_ptr<BaseReader> _reader;
 };
 
-#endif // BASEBUILDER_H
+#endif

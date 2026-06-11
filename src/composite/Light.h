@@ -24,10 +24,6 @@ public:
 
     void accept(const std::shared_ptr<BaseVisitor>& visitor) override;
 
-    void accept(const std::shared_ptr<MoveVisitor>& visitor);
-    void accept(const std::shared_ptr<RotateVisitor>& visitor);
-    void accept(const std::shared_ptr<ScaleVisitor>& visitor);
-
     std::shared_ptr<Memento> createSnapshot() override;
     void restoreSnapshot(const std::shared_ptr<Memento>& snapshot) override;
     

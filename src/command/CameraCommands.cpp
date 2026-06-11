@@ -3,10 +3,6 @@
 #include "manager/LoadManager.h"
 #include "manager/SceneManager.h"
 
-void LoadCameraCommand::execute() {
-    _loadMgr.loadCamera(_sceneMgr, _filename);
-}
-
 void AddDefaultCameraCommand::execute() {
     _sceneMgr.addDefaultCamera();
 }

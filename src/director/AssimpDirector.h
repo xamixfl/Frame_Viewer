@@ -4,17 +4,12 @@
 #include "director/BaseDirector.h"
 #include <memory>
 
-class AssimpModelBuilder;
-
 class AssimpDirector : public BaseDirector {
 public:
-    explicit AssimpDirector(std::unique_ptr<AssimpModelBuilder> builder) noexcept;
+    AssimpDirector() noexcept = default;
     ~AssimpDirector() override = default;
 
-    std::shared_ptr<BaseObject> construct(const std::string& filename) override;
-
-private:
-    std::unique_ptr<AssimpModelBuilder> _builder;
+    ObjectPtr construct(const std::string& filename) override;
 };
 
-#endif
+#endif // ASSIMPDIRECTOR_H

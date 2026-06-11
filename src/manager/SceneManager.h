@@ -39,6 +39,7 @@ public:
     [[nodiscard]] std::shared_ptr<Camera> getActiveCamera() const noexcept;
 
     void addDefaultCamera();
+    void addCamera(const ObjectPtr& cam);
 
     void addLight(const std::shared_ptr<Light>& light);
     void removeLight(const std::shared_ptr<Light>& light);

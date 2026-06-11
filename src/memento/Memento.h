@@ -7,9 +7,7 @@
 #include "data/Point.h"
 #include "bridge/BaseModelImpl.h"
 
-class CarcasModel;
-class AdjMatrixModel;
-class CarcasCamera;
+class CameraImpl;
 class CompositeObject;
 class AssimpModelImpl;
 
@@ -35,7 +33,7 @@ public:
     ~CameraMemento() override = default;
 
 private:
-    friend class CarcasCamera;
+    friend class CameraImpl;
 
     CameraMemento(Point pos, Point dir, Point up) noexcept;
 
@@ -56,7 +54,6 @@ private:
     std::vector<std::shared_ptr<Memento>> states;
 };
 
-// Memento.h
 class LightMemento final : public Memento {
 public:
     ~LightMemento() override = default;

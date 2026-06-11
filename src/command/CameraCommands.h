@@ -9,21 +9,6 @@
 class LoadManager;
 class SceneManager;
 
-class LoadCameraCommand final : public CameraCommand {
-public:
-    LoadCameraCommand(LoadManager& loadMgr, SceneManager& sceneMgr, std::string filename) noexcept
-        : _loadMgr(loadMgr), _sceneMgr(sceneMgr), _filename(std::move(filename)) {}
-    ~LoadCameraCommand() override = default;
-
-    void execute() override;
-    [[nodiscard]] std::string name() const override { return "Load camera: " + _filename; }
-
-private:
-    LoadManager& _loadMgr;
-    SceneManager& _sceneMgr;
-    std::string _filename;
-};
-
 class AddDefaultCameraCommand final : public CameraCommand {
 public:
     explicit AddDefaultCameraCommand(SceneManager& sceneMgr) noexcept : _sceneMgr(sceneMgr) {}

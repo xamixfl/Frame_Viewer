@@ -40,7 +40,6 @@ static constexpr auto qt_meta_stringdata_ZN10MainWindowE = QtMocHelpers::stringD
     "MainWindow",
     "onLoadModel",
     "",
-    "onLoadCamera",
     "onAddDefaultCamera",
     "onAddDefaultLight",
     "onRemoveSelected",

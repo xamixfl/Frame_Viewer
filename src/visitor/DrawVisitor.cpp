@@ -6,7 +6,6 @@
 #include "factory/AbstractDrawerFactory.h"
 #include "factory/BaseDrawer.h"
 #include "data/Point.h"
-#include "data/Edge.h"
 
 #include <cmath>
 #include <vector>
@@ -76,19 +75,6 @@ void DrawVisitor::visit(BaseModelImpl& impl) noexcept {
     drawer->clear();
     const std::vector<Face>& faces = impl.getFaces();
     const std::vector<Point>& points = impl.getPoints();
-
-    if (!_camera) {
-        const std::vector<Edge> edges = impl.getEdges();
-        for (const Edge& e : edges) {
-            const int a = e.first();
-            const int b = e.second();
-            if (a < 0 || b < 0 || static_cast<size_t>(a) >= points.size() || static_cast<size_t>(b) >= points.size()) {
-                continue;
-            }
-            drawer->drawLine(points[a], points[b]);
-        }
-        return;
-    }
 
     const ViewBasis vb = buildBasis(*_camera->_impl);
     if (!vb.valid) {

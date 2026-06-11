@@ -1,14 +1,15 @@
 #include "director/AssimpDirector.h"
 #include "builder/AssimpModelBuilder.h"
+#include "reader/AssimpReader.h"
 
-AssimpDirector::AssimpDirector(std::unique_ptr<AssimpModelBuilder> builder) noexcept 
-    : _builder(std::move(builder)) {}
+#include <memory>
 
-std::shared_ptr<BaseObject> AssimpDirector::construct(const std::string& filename) {
-    if (_builder) {
-        _builder->setFilename(filename);
-        _builder->build();
-        return _builder->getResult();
-    }
-    return nullptr;
+BaseDirector::ObjectPtr AssimpDirector::construct(const std::string& filename) {
+    auto reader = std::make_unique<AssimpReader>();
+    auto builder = std::make_unique<AssimpModelBuilder>(std::move(reader));
+
+    builder->setFilename(filename);
+    builder->build();
+    
+    return builder->getResult();
 }

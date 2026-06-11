@@ -213,4 +213,6 @@ CMakeFiles/OOP_Lab3_FrameViewer.dir/src/manager/SceneManager.cpp.o: \
  /home/aleksey/MSTU/OOP/lab3/Frame_Viewer/src/manager/HistoryManager.h \
  /usr/include/c++/14/stack /usr/include/c++/14/deque \
  /usr/include/c++/14/bits/stl_deque.h /usr/include/c++/14/bits/deque.tcc \
- /usr/include/c++/14/bits/stl_stack.h
+ /usr/include/c++/14/bits/stl_stack.h /usr/include/c++/14/algorithm \
+ /usr/include/c++/14/bits/ranges_algo.h \
+ /usr/include/c++/14/pstl/glue_algorithm_defs.h

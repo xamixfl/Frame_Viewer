@@ -37,4 +37,9 @@ void AssimpModelBuilder::_initModel() noexcept {
     _model = std::make_unique<AssimpModelImpl>();
 }
 
-void AssimpModelBuilder::build() {} // Пустой билд , так как сборкой управляет директор
+void AssimpModelBuilder::build() {
+    if (_reader) {
+        AssimpReader reader;
+        reader.readModel(_filename, *this);
+    }
+}

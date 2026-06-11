@@ -25,8 +25,7 @@ public:
     [[nodiscard]] ObjectPtr load(LoadId id, const std::string& filename);
 
     void loadModel(SceneManager& sceneMgr, LoadId id, const std::string& filename);
-    void loadCamera(SceneManager& sceneMgr, const std::string& filename);
-    void loadScene(SceneManager& sceneMgr, HistoryManager& historyMgr, const std::string& filename);
+    void loadCamera(SceneManager& sceneMgr, LoadId id, const std::string& filename);
 
 private:
     std::unique_ptr<Solution> _solution;

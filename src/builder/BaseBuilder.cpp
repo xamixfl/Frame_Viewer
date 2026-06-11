@@ -2,6 +2,6 @@
 
 void BaseBuilder::setFilename(const std::string& filename) const {
     if (_reader) {
-        _reader->open(filename);
+        _reader->read(filename);
     }
 }

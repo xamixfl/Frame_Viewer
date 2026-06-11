@@ -11,14 +11,11 @@ public:
 
     std::vector<Point>& getPoints() noexcept override { return _points; }
     const std::vector<Point>& getPoints() const noexcept override { return _points; }
-    std::vector<Edge> getEdges() const override { return _edges; }
     const std::vector<Face>& getFaces() const noexcept override { return _faces; }
 
     void addPoint(const Point& p) override { _points.push_back(p); }
-    void addEdge(const Edge& e) override { _edges.push_back(e); }
     void addFace(const Face& f) override { _faces.push_back(f); }
 
-    std::vector<Edge> getVisibleEdges(const Point& cameraPos) const override;
     bool isFaceVisible(size_t faceIndex, const Point& cameraPos) const override;
 
     std::shared_ptr<Memento> createSnapshot() override;
@@ -29,10 +26,8 @@ public:
 
 private:
     bool faceVisible(const std::vector<Point>& points, const Face& face, const Point& camPos) const;
-    bool edgeInFace(const Edge& edge, const Face& face) const;
 
     std::vector<Point> _points;
-    std::vector<Edge> _edges;
     std::vector<Face> _faces;
     Material _material;
 };

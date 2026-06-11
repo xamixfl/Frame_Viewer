@@ -1,5 +1,5 @@
-#ifndef CARCASCAMERA_H
-#define CARCASCAMERA_H
+#ifndef CameraImpl_H
+#define CameraImpl_H
 
 #include <memory>
 
@@ -8,12 +8,12 @@
 
 class Memento;
 
-class CarcasCamera final : public BaseCameraImpl {
+class CameraImpl final : public BaseCameraImpl {
 public:
-    CarcasCamera() noexcept = default;
-    CarcasCamera(const Point& pos, const Point& dir, const Point& u) noexcept
+    CameraImpl() noexcept = default;
+    CameraImpl(const Point& pos, const Point& dir, const Point& u) noexcept
         : _position(pos), _direction(dir), _up(u) {}
-    ~CarcasCamera() override = default;
+    ~CameraImpl() override = default;
 
     [[nodiscard]] Point getPosition() const noexcept override { return _position; }
     [[nodiscard]] Point getDirection() const noexcept override { return _direction; }

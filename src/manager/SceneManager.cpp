@@ -1,11 +1,12 @@
 #include "manager/SceneManager.h"
 #include "composite/CompositeObject.h"
 #include "composite/Camera.h"
-#include "bridge/CarcasCamera.h"
+#include "bridge/CameraImpl.h"
 #include "data/Point.h"
 #include "composite/Light.h"
 #include "exception/Exceptions.h"
 #include "manager/HistoryManager.h"
+#include <algorithm>
 
 #include <memory>
 
@@ -66,7 +67,7 @@ void SceneManager::setActiveCamera(size_t id) {
 }
 
 void SceneManager::addDefaultCamera() {
-    auto impl = std::make_unique<CarcasCamera>(
+    auto impl = std::make_unique<CameraImpl>(
         Point(0.0, 0.0, -10.0),
         Point(0.0, 0.0,  1.0),
         Point(0.0, 1.0,  0.0)
@@ -118,4 +119,13 @@ void SceneManager::addLight(const std::shared_ptr<Light>& light) {
 
 void SceneManager::removeLight(const std::shared_ptr<Light>& light) {
     _lights.erase(std::remove(_lights.begin(), _lights.end(), light), _lights.end());
+}
+
+void SceneManager::addCamera(const ObjectPtr& cam)
+{
+    if (!cam) {
+        throw NullObjectError(__FILE__, "SceneManager", __FUNCTION__);
+    }
+    _scene.addObject(cam);
+    setActiveCamera(cam->getId());
 }

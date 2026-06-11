@@ -25,31 +25,6 @@ bool AssimpModelImpl::isFaceVisible(size_t faceIndex, const Point& cameraPos) co
     return faceVisible(_points, _faces[faceIndex], cameraPos);
 }
 
-bool AssimpModelImpl::edgeInFace(const Edge& edge, const Face& face) const {
-    for (size_t i = 0; i < face.size(); ++i) {
-        int a = face[i], b = face[(i + 1) % face.size()];
-        if ((a == edge.first() && b == edge.second()) || (a == edge.second() && b == edge.first())) return true;
-    }
-    return false;
-}
-
-std::vector<Edge> AssimpModelImpl::getVisibleEdges(const Point& cam) const {
-    std::vector<bool> fVis(_faces.size());
-    for (size_t i = 0; i < _faces.size(); ++i) fVis[i] = faceVisible(_points, _faces[i], cam);
-
-    std::vector<Edge> visible;
-    for (const auto& e : _edges) {
-        bool any = false, vis = false;
-        for (size_t i = 0; i < _faces.size(); ++i) {
-            if (!edgeInFace(e, _faces[i])) continue;
-            any = true;
-            if (fVis[i]) { vis = true; break; }
-        }
-        if (!any || vis) visible.push_back(e);
-    }
-    return visible;
-}
-
 std::shared_ptr<Memento> AssimpModelImpl::createSnapshot() {
     return std::shared_ptr<ModelMemento>(new ModelMemento(_points, _material));
 }

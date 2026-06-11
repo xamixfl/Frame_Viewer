@@ -1,13 +1,13 @@
-#include "builder/CarcasCameraBuilder.h"
-#include "bridge/CarcasCamera.h"
+#include "builder/CameraBuilder.h"
+#include "bridge/CameraImpl.h"
 #include "exception/Exceptions.h"
 
-CarcasCameraBuilder::CarcasCameraBuilder(std::unique_ptr<BaseReader> reader) noexcept
+CameraBuilder::CameraBuilder(std::unique_ptr<BaseReader> reader) noexcept
     : BaseBuilder(std::move(reader)) {}
 
-CarcasCameraBuilder::~CarcasCameraBuilder() = default;
+CameraBuilder::~CameraBuilder() = default;
 
-void CarcasCameraBuilder::build() {
+void CameraBuilder::build() {
     _checkReader();
     _readPosition();
     _readDirection();
@@ -15,37 +15,37 @@ void CarcasCameraBuilder::build() {
     _assembleResult();
 }
 
-std::unique_ptr<CarcasCamera> CarcasCameraBuilder::getResult() noexcept {
+std::unique_ptr<CameraImpl> CameraBuilder::getResult() noexcept {
     return std::move(_impl);
 }
 
-void CarcasCameraBuilder::_checkReader() const {
+void CameraBuilder::_checkReader() const {
     if (!_reader || !_reader->isOpen()) {
-        throw BuilderNotReadyError(__FILE__, "CarcasCameraBuilder", __FUNCTION__);
+        throw BuilderNotReadyError(__FILE__, "CameraBuilder", __FUNCTION__);
     }
 }
 
-void CarcasCameraBuilder::_readPosition() {
+void CameraBuilder::_readPosition() {
     const double x = _reader->read();
     const double y = _reader->read();
     const double z = _reader->read();
     _position = Point(x, y, z);
 }
 
-void CarcasCameraBuilder::_readDirection() {
+void CameraBuilder::_readDirection() {
     const double x = _reader->read();
     const double y = _reader->read();
     const double z = _reader->read();
     _direction = Point(x, y, z);
 }
 
-void CarcasCameraBuilder::_readUp() {
+void CameraBuilder::_readUp() {
     const double x = _reader->read();
     const double y = _reader->read();
     const double z = _reader->read();
     _up = Point(x, y, z);
 }
 
-void CarcasCameraBuilder::_assembleResult() {
-    _impl = std::make_unique<CarcasCamera>(_position, _direction, _up);
+void CameraBuilder::_assembleResult() {
+    _impl = std::make_unique<CameraImpl>(_position, _direction, _up);
 }

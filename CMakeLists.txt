@@ -30,7 +30,7 @@ set(DOMAIN_SOURCES
     src/data/Point.cpp
 
     src/bridge/VectorCompositeImpl.cpp
-    src/bridge/CarcasCamera.cpp
+    src/bridge/CameraImpl.cpp
 
     src/memento/Memento.cpp
 
@@ -51,12 +51,11 @@ set(DOMAIN_SOURCES
 
     src/builder/BaseBuilder.cpp
     src/builder/CarcasModelBuilder.cpp
-    src/builder/CarcasCameraBuilder.cpp
+    src/builder/CameraBuilder.cpp
     src/builder/SceneBuilder.cpp
 
-    src/director/CarcasModelDirector.cpp
-    src/director/CarcasCameraDirector.cpp
-    src/director/SceneDirector.cpp
+    src/director/AssimpDirector.cpp
+    src/director/CameraDirector.cpp
 
     src/solution/Solution.cpp
 

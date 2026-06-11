@@ -20,13 +20,9 @@
 #include "data/Transform.h"
 #include "solution/Solution.h"
 #include "creator/CreatorMaker.h"
-#include "director/CarcasModelDirector.h"
-#include "director/CarcasCameraDirector.h"
-#include "director/SceneDirector.h"
+#include "director/CameraDirector.h"
 #include "director/AssimpDirector.h"
-#include "builder/CarcasModelBuilder.h"
-#include "builder/CarcasCameraBuilder.h"
-#include "builder/SceneBuilder.h"
+#include "builder/CameraBuilder.h"
 #include "builder/AssimpModelBuilder.h"
 #include "composite/Light.h"
 #include "bridge/LightImpl.h"
@@ -53,14 +49,12 @@ namespace {
 
 std::unique_ptr<Solution> buildLoadSolution() {
     return std::make_unique<Solution>(std::initializer_list<std::pair<std::size_t, Solution::CreatorFactory>>{
-        { static_cast<std::size_t>(LoadId::Model),
-          &CreatorMaker::make<CarcasModelBuilder, CarcasModelDirector> },
-        { static_cast<std::size_t>(LoadId::Camera),
-          &CreatorMaker::make<CarcasCameraBuilder, CarcasCameraDirector> },
-        { static_cast<std::size_t>(LoadId::Scene),
-          &CreatorMaker::make<SceneBuilder, SceneDirector> },
+        { static_cast<std::size_t>(LoadId::Camera), 
+          []() { return CreatorMaker::make<CameraBuilder, CameraDirector>(); } },
         { static_cast<std::size_t>(LoadId::AssimpModel), 
-        []() { return CreatorMaker::make<AssimpModelBuilder, AssimpDirector>(); } }
+          []() { return CreatorMaker::make<AssimpModelBuilder, AssimpDirector>(); } },
+        { static_cast<std::size_t>(LoadId::Light), 
+          []() { return CreatorMaker::make<LightBuilder, LightDirector>(); } }
     });
 }
 
@@ -491,7 +485,7 @@ void MainWindow::onSetMaterial() {
     auto ids = _selectedIds();
     if (ids.empty()) return;
 
-    // Берем материал из пресетов по текущему индексу комбо-бокса
+    // материал из пресетов по текущему индексу комбо-бокса
     Material newMaterial = MaterialPresets::getPreset(_materialCombo->currentIndex());
 
     auto& sm = _facade->getSceneManager();
